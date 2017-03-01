@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <title>snooker</title>
+</head>
+<body style = "background: #000">
+    <div class="view">
+        <canvas width="800" height="544" id="cas">
+            您的浏览器不支持canvas，请升级浏览器
+        </canvas>
+        <img src="./image/white_ball.png" id="wb" style = "display: none">
+        <img src="./image/yellow_ball.png" id="yb" style="display: none">
+        <div class="shotPower">
+            <div id="maxPower">Max</div>
+            <div id="powerbar"><div id="power"></div></div>
+            <div id="powText">Power</div>
+        </div>
+        <div style="position: absolute; left: -100px;top: 250px;color: #fff;">进球数：<span id="spanNum"> 0 </span></div>
+    </div>
+</body>
+</html>

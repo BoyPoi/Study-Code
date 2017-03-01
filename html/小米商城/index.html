@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>小米商城</title>
+</head>
+<body>
+	<a href="css.html" onclick="Show()">显示内容</a>	
+	<div id="aaa"></div>
+	<script type="text/javascript">
+		function Show(){
+			if (!document.getElementById) {
+				return false;
+			}
+			if (!document.createElement) {
+				return false;
+			}
+			var aaa=document.getElementById("aaa");
+			var p=document.createElement("p");
+			var txt=document.createTextNode("这是一个p标签");
+			p.appendChild(txt);
+			aaa.appendChild(p);
+		}
+	</script>
+</body>
+</html>

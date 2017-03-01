@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .minBox {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+
+        .maxBox {
+            display: block;
+            height: 200px;
+            width: 200px;
+            border: 1px solid #CCCCCC;
+            margin: 150px auto;
+        }
+    </style>
+</head>
+<body>
+<div class="minBox" draggable="true"></div>
+<div class="maxBox">
+    <img src="" alt="" class="image"/>
+</div>
+</body>
+<script src="jquery.min.js"></script>
+<script>
+    $(function () {
+        var minBox = $(".minBox")[0];
+        var maxBox = $(".maxBox")[0];
+        minBox.ondrag = function () {
+            //console.log("1");
+            this.style.background = "red";
+        };
+        minBox.ondragstart = function () {
+            //在新元素上显示
+            this.style.background = "pink";
+        };
+        minBox.ondragleave = function () {
+            this.style.background = "blue";
+        };
+        minBox.ondragend = function () {
+            this.style.background = "orange";
+        };
+        maxBox.ondragenter = function () {
+            this.style.background = "red";
+        };
+        maxBox.ondragover = function (event) {
+            this.style.background = "pink";
+            event.preventDefault();
+        };
+        maxBox.ondrop = function (event) {
+            console.log("1");
+            this.style.background = "blue";
+            event.preventDefault();
+            var file = event.dataTransfer;
+            //console.log(file);
+            var f = file.files[0];
+            var fs = new FileReader();
+            fs.readAsDataURL(f);
+            fs.onload = function () {
+                console.log(this.result);
+                $(".image").attr("src",this.result);
+            };
+        };
+        maxBox.ondragleave = function () {
+            this.style.background = "orange";
+        };
+    });
+</script>
+</html>

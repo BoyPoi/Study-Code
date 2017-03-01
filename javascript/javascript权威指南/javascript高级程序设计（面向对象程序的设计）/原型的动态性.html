@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+<script>
+	function Person(){
+	}
+	var friend = new Person();
+	Person.prototype = {
+		constructor:Person,
+		name:"Nicholes",
+		age:29,
+		job:"Software Engineer",
+		sayName:function(){
+			alert(this.name);
+		}
+	}
+	console.log(friend.__proto__);
+</script>	
+</body>
+</html>

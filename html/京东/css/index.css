@@ -1,0 +1,134 @@
+@charset "UTF-8";
+/*设置默认字符编码*/
+/*背景start*/
+.bg-banner {
+ position: relative;
+}
+.bg-banner a{
+    height: 644px;
+    width: 100%;
+    background: url(../image/bg-banner.jpg) top center no-repeat;
+    position: absolute;
+}
+/*背景end*/
+/*主体start*/
+.main{
+    margin-top: 12px;
+}
+.main .domain{
+    margin-left: 220px;
+    position: relative;
+}
+.main .domain ul{
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    margin-left: -66px;
+}
+.main .domain ul li{
+    float: left;
+    width: 18px;
+    height: 18px;
+    border-radius: 9px;
+    background-color: #3E3E3E;
+    margin: 0 2px;
+    text-align: center;
+    line-height: 18px;
+    color: #FFFFFF;
+}
+.main .domain ul li.cruent{
+    background-color: #B61B1F;
+}
+.arrows a{
+    width: 28px;
+    background: rgba(0,0,0,.2);
+    font: 400 22px/62px "simsun";
+    color: #FFFFFF;
+    position: absolute;
+    top: 50%;
+    margin-top: -31px;
+    text-align: center;
+}
+.arrows-l{
+    left: 0;
+}
+.arrows-r{
+    right: 0;
+}
+.news{
+    height: 372px;
+    width: 248px;
+    border: 1px solid #E5E5E5;
+    overflow: hidden;
+    position: relative;
+}
+.quick-news .mt{
+    height: 32px;
+    line-height: 32px;
+    padding: 0 10px;
+    border-bottom: 1px dashed #E5E5E5;
+}
+.quick-news .mt h3{
+    font-size: 16px;
+}
+.quick-news .mc{
+    line-height: 24px;
+    padding: 6px 0 0 15px;
+    border-bottom: 1px solid #E5E5E5;
+}
+.quick-news .mc span{
+    font-weight: bold;
+    margin-right: 5px;
+}
+.lifeserv ul{
+    width: 252px;
+}
+.lifeserv ul li{
+    float: left;
+}
+.lifeserv ul li a{
+    display: block;
+    width: 62px;
+    /*height: 28px;*/
+    /*background-color: blue;*/
+    border-right: 1px solid #E5E5E5;
+    border-bottom: 1px solid #E5E5E5;
+    text-align: center;
+    padding-top: 42px;
+    line-height: 28px;
+    position: relative;
+}
+.lifeserv ul li i{
+    width: 25px;
+    height: 25px;
+    background:url(../image/lifserv.png) 0 0 no-repeat;
+    position: absolute;
+    top: 14px;
+    left: 18px;
+}
+.down-ad{
+    margin-top: 5px;
+    position: relative;
+}
+/*主体end*/
+/*活动start*/
+.party{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.slider{
+    width: 1000px;
+    overflow: hidden;
+}
+.slider ul{
+    width: 6000px;
+}
+.slider ul li{
+    float: left;
+    margin-right: 1px;
+}
+.party .slider{
+    position: relative;
+}
+/*活动end*/

@@ -1,0 +1,312 @@
+/**
+ * Created by Administrator on 2016/12/5.
+ */
+
+body{
+    background: #f5f5f5;
+}
+
+.jd_layout{
+    min-width: 300px;
+    max-width: 640px;
+    margin: 0 auto;
+    height: 1000px;
+    position: relative;
+}
+
+/*头部搜索区块*/
+.jd_header{
+    position: fixed;/*在这里没有办法实现功能，因为fixed 基准是以window为基准的 ，并不是父盒子*/
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 40px;
+    /*background-color: rgba(201, 21, 35, 0);*/
+    z-index: 5;
+}
+.jd_header .jd_header_box{
+    min-width: 300px;
+    max-width: 640px;
+    height: 40px;
+    margin: 0 auto;
+    background-color: rgba(201, 21, 35, 0);
+    position: relative;
+}
+
+.jd_header .jd_header_box .icon_logo{
+    background-position: 0 -103px;
+    position: absolute;
+    left: 10px;
+    top: 4px;
+    height: 36px;
+    width: 60px;
+}
+
+.jd_header .jd_header_box .login{
+    position: absolute;
+    width: 50px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    right: 0;
+    top: 0;
+    font-size: 15px;
+    color: #fff;
+}
+
+.jd_header .jd_header_box form{
+    width: 100%;
+    padding: 0 55px 0 75px;
+}
+
+.jd_header .jd_header_box form input{
+    width: 100%;/*我们设置100%是以父容器内容区来计算的*/
+    border-radius: 15px;
+    height: 30px;
+    margin-top: 5px;
+    padding-left: 30px;
+}
+
+.jd_header .jd_header_box form .icon_search{
+    height: 20px;
+    width: 20px;
+    background-position: -60px -109px;
+    position: absolute;
+    left: 80px;
+    top: 10px;
+}
+
+/*轮播图*/
+.jd_banner{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.jd_banner ul:nth-child(1){
+    width: 1000%;
+    -webkit-transform: translateX(-10%);/*兼容*/
+    transform: translateX(-10%);
+}
+
+.jd_banner ul:nth-child(1) li{
+    width: 10%;
+    float: left;
+}
+
+.jd_banner ul:nth-child(1) li a{
+    width: 100%;
+    display: block;
+}
+
+.jd_banner ul:nth-child(1) li a img{
+    width: 100%;
+    display: block;/*清除间距*/
+}
+
+.jd_banner ul:nth-child(2){
+    position: absolute;
+    width: 150px;
+    left: 50%;
+    height: 6px;
+    bottom: 5px;
+    margin-left: -75px;
+}
+
+.jd_banner ul:nth-child(2) li {
+    float: left;
+    width: 6px;
+    height: 6px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    margin-left: 10px;
+}
+
+.jd_banner ul:nth-child(2) li.now{
+    background-color: white;
+}
+
+.jd_banner ul:nth-child(2) li:first-child{
+    margin-left: 0;
+}
+
+.jd_nav{
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #E0E0E0;
+}
+
+.jd_nav ul li{
+    float: left;
+    width: 25%;
+}
+
+.jd_nav ul li a{
+     width: 100%;
+     display: block;
+    text-decoration: none;
+}
+
+.jd_nav ul li a img{
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: 0 auto;
+}
+
+.jd_nav ul li a p{
+    font-size: 12px;
+    text-align: center;
+    color: #666;
+    padding: 6px 0;
+}
+
+/*商品盒子*/
+/*公用商品盒子*/
+.jd_product{
+    padding: 0 5px;
+}
+
+.jd_product_box{
+    margin-top: 10px;
+    box-shadow: 0 0 1px 1px #e0e0e0;
+    background-color: #fff;
+}
+
+.jd_product_box .product_title{
+    height: 32px;
+    border-bottom: 1px solid #E0E0E0;
+    line-height: 32px;
+}
+
+.jd_product_box .product_title.no_border{
+    border-bottom: none;
+}
+
+.jd_product_box .product_con{
+    min-height: 100px;
+}
+
+.jd_product_box .product_title h3{
+    position: relative;
+    margin-left: 10px;
+    padding-left: 7px;
+    font-weight:normal;
+}
+
+.jd_product_box .product_title h3::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    background: #d8505c;
+    width: 3px;
+    height: 12px;
+}
+
+.sk_icon{
+    float: left;
+    background: url("../images/seckill-icon.png") no-repeat;
+    background-size: 16px 20px;/*在一倍范围内都没有什么影响*/
+    width: 16px;
+    height: 20px;
+    margin: 7px 0 0 10px;
+}
+
+.sk_name{
+    float: left;
+    font-size: 15px;
+    color: #d8505c;
+    margin-left: 10px;
+}
+
+.time{
+    margin-left: 10px;
+}
+
+.time span{
+    display: block;
+    float: left;
+    height: 15px;
+    width: 15px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    line-height: 15px;
+    margin: 8px 3px 0px 0px;
+}
+
+.time span:nth-child(3n){
+    width: 3px;
+    background-color: white;
+    color: #333;
+}
+
+.more{
+    padding-right: 7px;
+}
+
+.sk_product{
+    padding: 10px 0;
+    text-align: center;
+    font-size: 12px;
+}
+
+.sk_product li{
+    width: 33.333%;
+    float: left;
+}
+
+.sk_product li a{
+    width: 100%;
+    display: block;
+    border-right: 1px solid #e0e0e0;
+}
+
+.sk_product li:last-child a{
+    border: none;
+}
+
+.sk_product li a img{
+    width: 64%;
+    display: block;
+    margin: 0 auto;
+}
+
+/*
+nth-of-type  选择同类型的第几个元素
+first-of-type 选择同类型的第一个元素
+last-of-type 选择同类型的最后一个元素
+*/
+
+.sk_product li p:nth-of-type(1){
+    color: #d8505c;
+    padding-top: 5px;
+}
+
+.sk_product li p:nth-of-type(2){
+    text-decoration: line-through;
+    padding-top: 5px;
+}
+
+.w_50{
+    width: 50%;
+    display: block;
+}
+.w_50 img{
+    width: 100%;
+    display: block;
+}
+
+.b_r{
+    border-right: 1px solid #e0e0e0;
+}
+
+.b_l{
+    border-left: 1px solid #E0E0E0;
+}
+
+.b_b{
+    border-bottom: 1px solid #E0E0E0;
+}

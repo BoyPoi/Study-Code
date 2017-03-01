@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>记忆</title>
+</head>
+<body>
+
+</body>
+<script>
+    var fobonacci = function () {
+        var memo = [0,1];
+        var fib = function (n) {
+            var result = memo[n]
+            if(typeof result !== 'number'){
+                result = fib(n-1) + fib(n-2);
+                memo[n] = result;
+            }
+            return result;
+        };
+        return fib;
+    }
+</script>
+</html>

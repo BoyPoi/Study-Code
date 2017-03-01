@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<input type="file" class="file" />
+	<img src="" alt="" id="img">
+	<script type="text/javascript">
+		var file = document.querySelector(".file");
+		console.dir(file);
+		file.onchange = function(){
+			var f = this.files[0];
+			var reader = new FileReader();
+			console.log(reader);
+			reader.readAsDataURL(f);
+			reader.onload = function(){
+			document.getElementById("img").src = this.result;
+		}
+	}
+	</script>
+</body>
+</html>

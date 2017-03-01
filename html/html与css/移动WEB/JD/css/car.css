@@ -1,0 +1,300 @@
+/**
+ * Created by Administrator on 2016/12/8.
+ */
+
+body {
+    background-color: #f5f5f5;
+}
+
+.layout{
+    min-width: 300px;
+}
+
+.jd_topBar {
+    position: static;
+}
+
+/*安全提示*/
+.jd_safeTip {
+    height: 34px;
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    line-height: 34px;
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+}
+
+.jd_safeTip p {
+    position: relative;
+    display: inline-block;
+    padding-left: 23px;
+}
+
+.jd_safeTip p:before {
+    content: "";
+    position: absolute;
+    background: url('../images/safe_icon.png') no-repeat;
+    -webkit-background-size: 18px 18px;
+    background-size: 18px 18px;
+    width: 18px;
+    height: 18px;
+    top: 8px;
+    left: 0;
+}
+
+/*店铺*/
+.jd_shop {
+    border-bottom: 1px solid #e0e0e0;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 10px;
+    background-color: #fff;
+}
+
+.jd_shop .jd_shop_tit {
+    height: 34px;
+    line-height: 34px;
+    position: relative;
+    padding-left: 40px;
+}
+
+/*.jd_shop .jd_shop_tit .checkbox{
+    width: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}*/
+
+.jd_shop .jd_checkbox {
+    display: block;
+    height: 34px;
+    padding: 7px 10px;
+    background: url("../images/shop-icon.png") no-repeat;
+    -webkit-background-size: 50px 100px;
+    background-size: 50px 100px;
+    background-position: 0 0;
+    background-origin: content-box;
+    background-clip: content-box;
+    width: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.jd_shop .jd_shop_tit .jd_shop_tit_right {
+    font-size: 12px;
+}
+
+.jd_shop .jd_shop_tit .jd_shop_tit_right img {
+    width: 15px;
+    height: 15px;
+    float: left;
+    margin-top: 9px;
+
+}
+
+.jd_shop .jd_shop_tit .jd_shop_tit_right .shop_name {
+    float: left;
+    font-size: 15px;
+    color: #666;
+    margin-left: 5px;
+}
+
+.jd_shop .product_Box {
+    height: 100px;
+    border-top: 1px solid #e0e0e0;
+    padding: 10px 0;
+    position: relative;
+}
+
+.jd_shop .product_Box .jd_checkbox {
+    background-position: -25px 0;
+}
+
+.jd_shop .product_Box .product_box_right {
+    padding-left: 40px;
+}
+
+.jd_shop .product_Box .product_box_right .img_box {
+    height: 80px;
+    width: 80px;
+    float: left;
+}
+
+.jd_shop .product_Box .product_box_right .img_box img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.jd_shop .product_Box .info_box {
+    overflow: hidden;
+    padding: 0 10px;
+}
+
+.jd_shop .product_Box .info_box .name {
+    display: block;
+    width: 100%;
+    height: 30px;
+    line-height: 15px;
+    overflow: hidden;
+}
+
+.jd_shop .product_Box .info_box p {
+    font-size: 12px;
+    padding: 4px 0;
+}
+
+.jd_shop .info_box .changeBox {
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+.jd_shop .info_box .changeBox span {
+    width: 32px;
+    height: 24px;
+    float: left;
+    text-align: center;
+    line-height: 24px;
+}
+
+.jd_shop .info_box .changeBox span:first-child {
+    border-right: 1px solid #ccc;
+}
+
+.jd_shop .info_box .changeBox span:last-child {
+    border-left: 1px solid #ccc;
+}
+
+.jd_shop .info_box .changeBox input {
+    width: 32px;
+    height: 24px;
+    float: left;
+    text-align: center;
+    line-height: 24px;
+}
+
+.jd_shop .info_box .deleteBox span:first-child {
+    display: block;
+    width: 20px;
+    height: 5px;
+    background: url("../images/delete_up.png") no-repeat;
+    background-size: 20px 5px;
+    margin-left: -1px;
+}
+
+.jd_shop .info_box .deleteBox span:last-child {
+    display: block;
+    width: 18px;
+    height: 18px;
+    background: url("../images/delete_down.png") no-repeat;
+    background-size: 18px 18px;
+    margin-top: -2px;
+}
+
+.jd_win{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .6);
+    z-index: 1000;
+    display: none;
+}
+
+.jd_win .win_box{
+    width: 80%;
+    margin: 0 auto;
+    background-color: #fff;
+    margin-top: 200px;
+    border-radius: 4px;
+    padding: 0 10px;
+}
+
+.jd_win .win_box .text_box{
+    line-height: 75px;
+    font-size: 18px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.jd_win .win_box .btn_box{
+    padding: 10px 0;
+}
+
+.jd_win .win_box .btn_box a{
+    width: 45%;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    float: left;
+    border-radius: 4px;
+}
+
+.jd_win .win_box .btn_box a:first-child{
+    border: 1px solid #e0e0e0;
+    margin-right: 10%;
+}
+
+.jd_win .win_box .btn_box a:last-child{
+    background-color: #d8505c;
+    color: white;
+}
+.jd_win .win_box.bounceInDown{
+    animation: bounceInDown 1s;
+    -webkit-animation: bounceInDown 1s;
+}
+
+
+/*bounceInDown*/
+@keyframes bounceInDown {
+    0%{
+        opacity: 0;
+        -webkit-transform: translateY(-3000px);
+        transform: translateY(-3000px);
+    }
+    60%{
+        opacity: 1;
+        -webkit-transform: translateY(25px);
+        transform: translateY(25px);
+    }
+    75%{
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+    90%{
+        -webkit-transform: translateY(5px);
+        transform: translateY(5px);
+    }
+    100%{
+        opacity: 1;
+        -webkit-transform:none;
+        transform:none;
+    }
+}
+@-webkit-keyframes bounceInDown {
+    0%{
+        opacity: 0;
+        -webkit-transform: translateY(-3000px);
+        transform: translateY(-3000px);
+    }
+    60%{
+        opacity: 1;
+        -webkit-transform: translateY(25px);
+        transform: translateY(25px);
+    }
+    75%{
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+    90%{
+        -webkit-transform: translateY(5px);
+        transform: translateY(5px);
+    }
+    100%{
+        opacity: 1;
+        -webkit-transform:none;
+        transform:none;
+    }
+}

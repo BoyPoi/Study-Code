@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background: #080e24 url(./image/bgz.jpg);
+        }
+        ul{
+            list-style: none;
+            width: 600px;
+            height: 600px;
+            margin: 40px auto;
+            position: relative;
+            perspective: 1000px;
+        }
+        ul li{
+            border: 2px solid #394057;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            border-radius: 50%;
+            transform: translate(-50%,-50%);
+            animation: move linear infinite;
+        }
+        ul li span{
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            left: 0;
+            border-radius: 50%;
+        }
+        ul li:nth-child(1){
+            width: 60px;
+            height: 60px;
+            border: none;
+            background-color: #C90;
+            box-shadow: 0 0 50px #c90;
+            animation-duration: 6s;
+        }
+        ul li:nth-child(2){
+            width: 120px;
+            height: 120px;
+            animation-duration: 6s;
+        }
+        ul li:nth-child(2) > span{
+            left:30px;
+            top: 0;
+            background-color: yellow;
+        }
+        ul li:nth-child(3){
+            width: 180px;
+            height: 180px;
+            animation-duration: 10s;
+        }
+        ul li:nth-child(3) > span{
+            left: 52px;
+            top: 0;
+            background-color: blue;
+        }
+        ul li:nth-child(4){
+            width: 240px;
+            height: 240px;
+            animation-duration: 12s;
+        }
+        ul li:nth-child(4) > span{
+            left: 110px;
+            top: 0;
+            background-color: green;
+            animation: move 2s linear infinite;
+        }
+        ul li:nth-child(4) > span span{
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            left: 12px;
+            top: 0;
+            background-color: orange;
+        }
+        ul li:nth-child(5){
+            width: 300px;
+            height: 300px;
+            background: url("./image/asteroids_meteorids.png") no-repeat;
+            background-size: cover;
+            animation-duration: 15s;
+        }
+        ul li:nth-child(5) > span{
+            left: 103px;
+            top: 0;
+            background-color: pink;
+        }
+        ul li:nth-child(6){
+            width: 360px;
+            height: 360px;
+            animation-duration: 18s;
+        }
+        ul li:nth-child(6) > span{
+            left: 130px;
+            top: 0;
+            background-color: purple;
+        }
+        ul li:nth-child(7){
+             width: 420px;
+             height: 420px;
+            animation-duration: 20s;
+         }
+        ul li:nth-child(7) > span{
+            left: 155px;
+            top: 0;
+            background-color: deepskyblue;
+        }
+        ul li:nth-child(7) > span span{
+            width: 15px;
+            height: 15px;
+            border: 2px solid #ccc;
+            transform: skew(0deg,45deg);
+            left: -4px;
+            top: -4px;
+        }
+        ul li:nth-child(8){
+            width: 480px;
+            height: 480px;
+            animation-duration: 23s;
+
+        }
+        ul li:nth-child(8) > span{
+            left: 180px;
+            top: 0;
+            background-color: silver;
+        }
+        ul li:nth-child(9){
+            width: 540px;
+            height: 540px;
+            animation-duration: 25s;
+
+        }
+        ul li:nth-child(9) > span{
+            left: 210px;
+            top: 0;
+            background-color: saddlebrown;
+        }
+        ul li:nth-child(10){
+            width: 600px;
+            height: 600px;
+            animation-duration: 28s;
+        }
+        ul li:nth-child(10) > span{
+            left: 235px;
+            top: 0;
+            background-color: darkorchid;
+        }
+        @keyframes move {
+            from{
+                transform: translate(-50%,-50%) rotate(0deg);
+            }
+            to{
+                transform: translate(-50%,-50%)  rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li></li>
+        <li><span></span></li>
+        <li><span></span></li>
+        <li><span><span></span></span></li>
+        <li><span></span></li>
+        <li><span></span></li>
+        <li><span><span></span></span></li>
+        <li><span></span></li>
+        <li><span></span></li>
+        <li><span></span></li>
+    </ul>
+</body>
+</html>

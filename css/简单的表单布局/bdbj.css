@@ -1,0 +1,30 @@
+fieldset{
+	margin: 1em 0;
+	padding: 1em;
+	border:1px solid #ccc;
+	background: #f8f8f8;
+}
+legend{
+	font-weight: bold;
+}
+label{
+	float: left;
+	width: 10em;
+	cursor: pointer;
+}
+input{
+	width: 20em;
+}
+textarea{
+	width: 100%;
+	height: 20em;
+}
+input.radio{
+	width: auto;
+}
+#remember-me .radio{
+	margin-right: 1em;
+}
+input[type="text"]:focus,textarea:focus{
+	background: #ffc;
+}

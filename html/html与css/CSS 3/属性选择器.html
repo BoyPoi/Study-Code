@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<style>
+		/* [href]{
+			background:red;
+		} */
+		[href^=a]{
+			color:red;
+		}
+		[href$=t]{
+			color:blue;
+		}
+		[href*="3"]{
+			color:pink;
+		}
+		[href="e.avi"]{
+			color:green;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+	    <li><a href="a.mp4">mp4是一个视频文件</a></li>
+	    <li><a href="b.text">这是一个文本文件</a></li>
+	    <li><a href="c.mp3">这是一个音频文件</a></li>
+	    <li><a href="e.avi">这是一个视频文件</a></li>
+	</ul>
+</body>
+</html>

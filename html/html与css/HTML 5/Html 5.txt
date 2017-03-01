@@ -1,0 +1,95 @@
+Html5
+通过window.onLine来检测，用户当前网络状态，返回一
+个boolean值
+
+判断当前的网络状态
+window.navigator.online
+
+网络事件
+online()
+offline()
+
+
+全屏
+存在兼容性，要根据不同的内核加不同的前缀
+webkitCancelFullScreen是document独有的方法，只有
+使用document.webkitCancelFullScreen()才能起作用
+
+webkitRquestFullScreen是处于原型链上的方法，因此都
+可以调用此方法。
+
+document.fullScreen(属性)  检测当前是否处于全屏
+document.webkitIsFullScreen     //谷歌浏览器
+document.mozFullScreen     //fireFox
+
+全屏伪类：:full-screen{} 兼容性 不同内核加不同前缀，如:
+:webkit-full-screen{}
+
+
+文件读取
+fileReader对象
+
+
+拖拽
+draggable设置盒子可拖拽  a 和 img 默认可拖拽
+
+拖拽事件
+拖拽元素
+ondrag  整个拖拽过程中都会调用
+ondragstart 开始拖拽触发
+ondragleave 鼠标离开拖拽元素时触发
+ondragend 结束拖拽触发
+目标元素
+ondragenter 鼠标进入目标元素时触发
+ondragover 当停留在目标元素上时触发
+ondrop  在目标元素上松开鼠标时调用
+ondragleave  鼠标离开目标元素时触发
+在默认情况下，目标元素是不允许接收拖拽元素的，因此要在dragend或者dragover事件内调用event.preventDefault方法
+
+
+地理位置
+1、获取当前地理位置
+navigator.geolocation.getCurrentPosition(successCallBack(){},errorCallBack(){},option)
+successCallBack(position){}成功了调用的回调函数，并会返回一个位置信息（position对象）
+errorCallBack(err){}失败了调用的回调函数，并会返回一个错误信息（error）
+可选参数 options 对象可以调整位置信息数据收集方式：
+a) enableHighAccuracy 高精度模式
+b) timeout 超时设置，单位为ms
+c) maximumAge表示浏览器重新获取位置信息的时间间隔，单位为ms
+2、重复获取当前地理位置
+navigator.geolocation.watchPosition(successCallBack(){},errorCallBack(){},option)
+
+history对象
+pushState()往历史纪录添加一条记录
+history.pushState({},"我是标题"，"/demo.html")
+第一个参数：对象，再添加历史时，会设置一些数据，一般设置null
+第二个参数：一般不生效，没意义
+第三个参数：我们要更改的地址，并且会当一条新的历史记录
+
+repleaceState()替换当前地址，不生成新历史纪录
+
+
+本地存储数据（以键值对方式存储，原来用cookie存储）
+sessionStorage 关闭浏览器清空，在同一个窗口下数据可以共享 
+方法：
+setItem(key,value)设置
+getItem(key)读取
+removeItem(key)删除
+clear()清空
+
+localStorage 永久生效，除非手动删除，可以多窗口共享
+方法与sessionStorage一样
+
+
+应用缓存 存储在本地的数据，网络离线状态下仍然可以访问资源
+以.appcache为后缀名
+例如我们创建了一个名为demo.appcache的文件，然后在需要应用缓存在页面的根元素(html)添加属性manifest="demo.appcache"，路径要保证正确。
+
+manifest文件格式
+1、顶行写CACHE MANIFEST
+2、CACHE: 换行 指定我们需要缓存的静态资源，如.css、image、js等
+3、NETWORK: 换行 指定需要在线访问的资源，可使用通配符
+4、FALLBACK: 换行 当被缓存的文件找不到时的备用资源
+
+
+<object>行内元素标签

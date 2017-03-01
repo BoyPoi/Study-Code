@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="EditPlus">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        #a{
+            width:258px;
+            height:258px;
+            text-align:center;
+            margin:10px auto;
+            background:#eaeaea;
+        }
+        #a ul{
+            width:240px;
+            height:180px;
+            margin:10px auto;
+            -webkit-padding-start: 18px;
+        }
+        #a ul li{
+            width:52px;
+            height:52px;
+            float:left;
+            list-style:none;
+            text-align:center;
+            background:#000;
+            color:#fff;
+            margin:10px 4px 0 0;
+        }
+        #b{
+            width:220px;
+            height:50px;
+            background:#f1f1f1;
+            margin:17px auto;
+            text-align:left;
+        }
+        #a ul li.current{
+            background:#fff;
+            color:red;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var oli = document.getElementById("a").getElementsByTagName("li");
+            var ooo = document.getElementById("b").getElementsByTagName("p")[0];
+
+            var array = [
+                "一月是我的生日",
+                "二月天气真好",
+                "三月",
+                "四月",
+                "五月",
+                "六月",
+                "七月",
+                "八月",
+                "九月",
+                "十月",
+                "十一月",
+                "十二月"
+            ];
+            for(var i =0;i<oli.length;i++){
+                oli[i].index = i;
+                for(var n = 0;n<oli.length;n++){
+                    oli[i].onmouseover = function(){
+                        oli[n].className="";
+                        this.className="current";
+                        ooo.innerTHML = array[this.index];
+                    }(n);
+                }
+            }
+        }
+    </script>
+
+</head>
+<body>
+<div id="a">
+    <ul>
+        <li>1<br/>JAN</li>
+        <li>2<br/>FER</li>
+        <li>3<br/>MAR</li>
+        <li>4<br/>APR</li>
+        <li>5<br/>MAY</li>
+        <li>6<br/>JUN</li>
+        <li>7<br/>JUL</li>
+        <li>8<br/>AUG</li>
+        <li class="current">9<br/>SEP</li>
+        <li>10<br/>OTC</li>
+        <li>11<br/>NOV</li>
+        <li>12<br/>DEC</li>
+    </ul>
+    <div id="b">
+        <p></p>
+    </div>
+</div>
+</body>
+</html>

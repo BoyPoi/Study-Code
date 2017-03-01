@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+    <title></title>
+    <link href="../lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="../lib/html5shiv/html5shiv.min.js"></script>
+    <script src="../lib/respond/respond.js"></script>
+    <![endif]-->
+    <style>
+        .container{
+            height: 100px;
+            background-color: skyblue;
+        }
+        .row{
+            height: 100px;
+            background-color: green;
+        }
+        .container-fluid{
+            height: 100px;
+            background-color: blue;
+        }
+        .row div{
+            background-color: red;
+            height: 100px;
+            border: 1px solid white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"></div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"></div>
+        <!--<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"></div>-->
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 col-lg-offset-3"></div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    
+</div>
+
+<script src="../lib/jquery/jquery.js"></script>
+<script src="../lib/bootstrap/js/bootstrap.js"></script>
+</body>
+</html>

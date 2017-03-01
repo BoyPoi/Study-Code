@@ -1,0 +1,17 @@
+<!DOCTYPE>
+<html>
+	<meta  charset="UTF-8">
+	<body>
+		<script type="text/javascript">
+				function setName(obj){
+					obj.name="Nicholas";
+					obj=new Object();
+					obj.name="Greg";
+					alert(obj.name);
+				}
+				var person=new Object();
+				setName(person);
+				alert(person.name);
+		</script>
+	</body>
+</html>

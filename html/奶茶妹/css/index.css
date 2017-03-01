@@ -1,0 +1,199 @@
+/*导航start*/
+.nav{
+    /*height: 44px;*/
+    border-bottom: 2px solid #B1191A;
+}
+
+.classify{
+    height: 44px;
+    position: relative;
+    z-index: 3;
+}
+
+.classify dt a{
+    font: 400 14px/44px "微软雅黑";
+    color: #FFFFFF;
+    display: block;
+    height: 44px;
+    width: 200px;
+    background-color: #B1191A;
+    padding-left: 10px;
+    margin-bottom: 2px;
+}
+.classify dd a{
+    display: block;
+    height: 31px;
+    font: 400 14px/31px "微软雅黑";
+    color: #FFFFFF;
+    padding-left: 10px;
+    border-left: 1px solid #B1191A;
+    background-color: #B1191A;
+    position: relative;
+}
+.classify dd a i{
+    font: 400 9px/14px "consolas";
+    position: absolute;
+    top: 10px;
+    right: 12px;
+}
+.navitem ul li{
+    float: left;
+}
+.navitem ul li a{
+    display: block;
+    font: 400 16px/44px "微软雅黑";
+    padding: 0 20px;
+}
+.main-ad{
+    height: 44px;
+}
+.main-ad a{
+    position: relative;
+    top: -10px;
+    right: 50px;
+}
+/*导航end*/
+/*主体start*/
+
+.main-slider{
+    margin-left: 220px;
+    margin-top: 10px;
+    position: relative;
+}
+.main-slider ul {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    margin-left: -66px;
+}
+.main-slider ul li{
+    float: left;
+}
+.main-slider ul li a{
+    display: block;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    background-color: #3E3E3E;
+    color: #FFFFFF;
+    border-radius: 9px;
+    margin: 0 2px;
+}
+.main-slider .current{
+    background-color: #B61B1F;
+}
+.arrows a{
+    font: 400 22px/62px "consolas";
+    width: 28px;
+    background-color: rgba(0, 0, 0, .2);
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    margin-top: -31px;
+    color: #FFFFFF;
+}
+.arrows-l{
+    left: 0;
+}
+.arrows-r{
+    right: 0;
+
+}
+.main-extra .news{
+    height: 372px;
+    /*width: 248px;*/
+    border: 1px solid #E5E5E5;
+    margin-top: 10px;
+    position: relative;
+}
+.main-extra .news .qk-news .mc ul{
+    border-bottom: 1px solid #E5E5E5;
+    padding: 6px 0 0 10px;
+}
+.main-extra .news .qk-news .mt{
+    height: 32px;
+    line-height: 32px;
+    border-bottom: 1px dashed #E5E5E5;
+}
+.main-extra .news .qk-news .mt h3{
+    font-size: 16px;
+}
+.main-extra .news .qk-news .mc li{
+    line-height: 24px;
+    float: none;
+}
+.news .qk-news .mc li span{
+    font-weight: bold;
+    margin-right: 5px;
+}
+.lifeserv{
+    width: 248px;
+    overflow: hidden;
+}
+.lifeserv ul{
+    width: 252px;
+}
+.lifeserv ul li{
+    float: left;
+    padding: 0;
+}
+.lifeserv ul li a{
+    display: block;
+    height: 28px;
+    width: 62px;
+    border-right: 1px solid #E5E5E5;
+    border-bottom: 1px solid #E5E5E5;
+    padding-top: 42px;
+    line-height: 28px;
+    text-align: center;
+    position: relative;
+}
+.lifeserv ul li a i{
+    position: absolute;
+    display: block;
+    width: 25px;
+    height: 25px;
+    background: url("../images/lifserv.png") 0 -50px no-repeat;
+    top: 14px;
+    left: 18px;
+}
+.bottom-ad{
+    margin-top: 5px;
+    position: relative;
+}
+/*主体end*/
+/*活动start*/
+.party{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.party .sub-slider{
+    width: 1000px;
+    overflow: hidden;
+}
+.party .sub-slider ul{
+    width: 6000px;
+}
+.party .sub-slider ul li{
+    padding: 0;
+    float: left;
+    margin-right: 1px;
+}
+.sub-slider{
+    position: relative;
+}
+/*活动end*/
+/*背景start*/
+.bg-banner{
+    position: relative;
+}
+.bg-banner a{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 644px;
+    background: url("../images/bg-banner.jpg") top center no-repeat;
+}
+/*背景end*/

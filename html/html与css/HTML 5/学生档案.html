@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #F7F7F7;
+        font-family: '微软雅黑';
+    }
+
+    form {
+        max-width: 640px;
+        width: 100%;
+        margin: 24px auto;
+        font-size: 28px;
+    }
+
+    label {
+        display: block;
+        margin: 10px 10px 15px;
+        font-size: 24px;
+    }
+
+    input {
+        display: block;
+        width: 100%;
+        height: 40px;
+        font-size: 22px;
+        margin-top: 10px;
+        padding: 6px 10px;
+        color: #333;
+        border: 1px solid #CCC;
+        box-sizing: border-box;
+    }
+
+    meter, progress {
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .btn {
+        margin-top: 30px;
+    }
+
+    .btn input {
+        color: #FFF;
+        background-color: green;
+        border: 0 none;
+        outline: none;
+        cursor: pointer;
+    }
+
+</style>
+<body>
+<form action="">
+    <fieldset>
+        <legend>学生档案</legend>
+        <label>
+            姓名：<input type="text" placeholder="请输入你的姓名"/>
+        </label>
+        <label>
+            手机号码：<input type="tel" placeholder="请输入手机号码"/>
+        </label>
+        <label>
+            邮箱地址：<input type="email" placeholder="请输入邮箱地址"/>
+        </label>
+        <label>
+            所属学院：<input type="text" placeholder="前端与移动开发学院" list="prograss"/>
+        </label>
+        <datalist id="prograss">
+            <option value="前端与移动开发"></option>
+            <option value="PHP"></option>
+            <option value="JAVA"></option>
+            <option value="Android"></option>
+            <option value="ios"></option>
+            <option value="UI设计"></option>
+            <option value="C++"></option>
+        </datalist>
+        <label>
+            入学成绩：<input type="number" id="cj"/>
+        </label>
+        <label>
+            基础水平：<meter min="0" max="100" low="60" high="80" id="meter"></meter>
+        </label>
+        <script>
+            var cj = document.getElementById("cj");
+            var met = document.getElementById("meter");
+            cj.onkeyup = function(){
+                var val = cj.value;
+                met.value = val;
+            }
+        </script>
+        <label for="">
+            入学日期：<input type="date" value="2016-01-01"/>
+        </label>
+        <label for="">
+            毕业时间：<input type="date" value="2016-05-01"/>
+        </label>
+        <label for="">
+            课程进度：<progress min="0" max="100" value="1"></progress>
+        </label>
+        <label for="" class="btn">
+            <input type="submit"/>
+        </label>
+    </fieldset>
+</form>
+</body>
+</html>

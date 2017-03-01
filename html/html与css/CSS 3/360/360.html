@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="./css/360.css"/>
+</head>
+<body>
+<div id="fullpage">
+    <div class="section first">
+        <div class="logo"></div>
+        <div class="text">
+            <img src="./images/text_1.png" alt=""/>
+            <img src="./images/text_2.png" alt=""/>
+            <img src="./images/text_3.png" alt=""/>
+            <img src="./images/text_4.png" alt=""/>
+            <img src="./images/text_5.png" alt=""/>
+            <img src="./images/text_6.png" alt=""/>
+            <img src="./images/text_7.png" alt=""/>
+            <img src="./images/text_8.png" alt=""/>
+        </div>
+        <div class="info"></div>
+    </div>
+    <div class="section second">
+        <div class="shiled">
+            <img src="./images/shield_1.png" alt=""/>
+            <img src="./images/shield_2.png" alt=""/>
+            <img src="./images/shield_3.png" alt=""/>
+            <img src="./images/shield_4.png" alt=""/>
+            <img src="./images/shield_5.png" alt=""/>
+            <img src="./images/shield_6.png" alt=""/>
+            <img src="./images/shield_7.png" alt=""/>
+            <img src="./images/shield_8.png" alt=""/>
+            <img src="./images/shield_9.png" alt=""/>
+        </div>
+        <div class="info"></div>
+    </div>
+    <div class="section third">
+        <div class="info"></div>
+        <div class="circle"></div>
+        <div class="rocket">
+            <img src="./images/rocket.png" alt=""/>
+        </div>
+    </div>
+    <div class="section fourth">
+        <div class="search">
+            <div class="searchbar"></div>
+            <div class="keys"></div>
+            <div class="result">
+                <div class="inner"></div>
+            </div>
+        </div>
+        <div class="info"></div>
+    </div>
+    <div class="section fifth">
+        <div class="info"></div>
+        <div class="broswer">
+            <div class="lineleft"></div>
+            <div class="linetop"></div>
+            <div class="lineright"></div>
+            <div class="linebottom"></div>
+            <div class="toolbar">
+                <div class="box">
+                    <div class="inner"></div>
+                </div>
+            </div>
+            <div class="extra"></div>
+            <div class="line"></div>
+        </div>
+    </div>
+</div>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/jquery.fullPage.min.js"></script>
+<script>
+    $(function () {
+        $("#fullpage").fullpage({
+            sectionsColor: ['#0da5d6', '#2AB561', '#DE8910', '#16BA9D', '#0DA5D6'],
+            afterLoad: function (link,key) {
+                $('.section').removeClass('current')
+                setTimeout(function () {
+                    $(".section").eq(key-1).addClass("current")
+                },50);
+            }
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>类模拟库</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var Class = function(){
+			var klass = function(){
+				this.init.apply(this, arguments);
+			};
+			klass.prototype.init = function(){};
+				return klass;
+		};
+		var Person = new Class;
+		console.log(Person.prototype.init());
+		Person.prototype.init = function(){
+			// 基于 Person 的实例做初始化
+			console.log("a");
+		};
+		// 用法 ：
+		console.log(Person.prototype.init());
+		var person = new Person;
+		console.log(person.init());
+	</script>
+</body>
+</html>

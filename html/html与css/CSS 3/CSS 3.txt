@@ -1,0 +1,217 @@
+属性选择器 [属性]
+判断属性值来选择属性
+	//以某个字符开头的
+	[属性^=值]
+	//以某个字符结尾的
+	[属性$=值]
+	//任何位置包含某一个字符
+	[属性*=值]
+	//完全等于某个字符
+	[属性=值]
+
+
+伪类选择器
+	li:first-child li的父元素的第一个子元素（必须是li元素）
+	li:last-child  li的父元素的最后一个子元素（同上）
+	li:nth-child(n)   li的父元素的第n个子元素（同上，且n可以为变量，如7n）
+		// li:nth-child(odd)
+		// li:nth-child(even)
+		// n的格式必须是kn+b，不能写成5-n这样的形式
+	li:nth-last-child(n) 从后往前数，li的父元素的第n个子元素
+	:empty 当元素内容为空时被选择
+	:target 选中处于当前锚点位置的元素
+	:not(s)匹配所有不匹配简单选择符s的元素
+
+
+伪元素选择器(双冒号)
+	//E::before  ::after
+	content属性是必须要有的，可以写入文本，通常为空
+	新创建的元素是行内元素
+	//E::first-letter选择第一个字符
+	//E::first-line选中第一行
+	//E::selection设置被选中的对象的样式，不能设置字体大小，设置了first-letter就不能被选中
+
+	
+文本阴影
+	text-shadow：可分别设置偏移量(水平，竖直)、模糊度、颜色
+		//模糊度不能为负数
+
+
+边框
+	//边框圆角：boder-radius的属性值是指一个模拟圆的半径
+	边框椭圆圆角：border-radius：四个角的水平半径/四个角的垂直半径
+	水平半径指的是椭圆的a值，垂直半径指的是椭圆的b值
+
+
+边框阴影
+	//box-shadow 偏移量 模糊度 颜色 inset可以设置内阴影
+	设置边框阴影不会改变盒子的大小
+
+
+边框图片
+	//border-image：source slice repeat width
+	//border-image-source: url()(图片源)
+	//边框图片平铺样式 
+	border-image-repeat：stretch(拉伸) || repeat(重复平铺,有图片被切) || round(重复平铺，无图片被切)
+
+
+盒模型
+	//box-sizing改变计算盒子大小的方式
+	box-sizing:content-box(默认计算方式 width = content  content + padding + border)
+
+	box-sizing:border-box(content = width - padding - border)
+
+
+透明度
+	//opacity 子元素会继承
+	//transparent 只能设置全透明
+	//rgba() a 透明度
+	//hsla() 
+	h 色调 0~360 0/360红色 120绿色 240蓝色   
+	s 饱和度 0%~100%   
+	l 亮度 0%~100%  
+	a 透明度
+
+
+背景
+	//background-size:600px 400px/100% 100%/cover
+	百分比相对于盒子自身宽高
+	cover 图片始终铺满盒子，会自动调整缩放比例，当某一边的宽度或高度不够，图片会被裁切(溢出)
+	contain 保证背景图片完整显示在盒子中,会自动调整缩放比例
+
+	//backround-origin:设置背景定位的原点
+	padding-box 以内边距作为参考原点
+	border-box 以边框作为参考原点
+	content-box 以内容区作为参考原点
+
+	//background-clip 裁切 
+	padding-box 裁切内边距以内为背景区域
+	border-box 裁切边框以内为背景区域
+	content-box 裁切内容区以内为背景区域
+
+	//多背景  background:  ,   ,   ,   ;
+
+渐变
+	//线性渐变 方向 颜色 范围
+	linear-gradient(方向,颜色 百分数,颜色 百分数)
+	方向可以是to left/right以及度数
+	百分数指的是该颜色在盒子中的位子，两个百分数之间是渐变范围(百分比相对于整个盒子)
+	当设置了background-size，百分比相对于background-size
+
+    //径向渐变 范围 颜色 位置(圆心点)
+    radial-gradient(半径 at 位置,颜色,颜色)
+    //椭圆 radial-gradient(120px 80px at center center ,yellow ,green)
+    位置可以是 百分比 数值以及center
+
+
+过渡 必须有两种状态
+    //transition: transition-property transition-duration transition-delay transition-timing-function;
+    transition: margin/all 3s;
+    /*参数间除时间外没有顺序要求，第一个时间是执行时间，第二个是延时时间*/
+    all 代表所有效果
+    可以过渡大部分属性，并不是全部
+
+    //设置需要过渡的属性
+    transition-property
+
+    //设置过渡需要的时间
+    transition-duration
+
+    //设置过渡的延时
+    transition-delay
+
+    //设置过渡动画的速度
+    transition-timing-function：linear(匀速)/ease/ease-in/ease-in-out;
+
+
+2D转换  transform 用来设置2D和3D转换的
+	//移动 translate(x,y) 位置改变，x表示水平上的，y表示竖直上的，可以给负值，x、y表示移动的距离
+	设置百分比时，相对于盒子的大小
+
+	//缩放 scale(x,y)可以对元素进行水平和垂直方向的缩放，x、y可以为小数，但不能为负值，x指的是水平坐标轴倾斜的角度，y指的是垂直坐标轴倾斜的角度
+
+	//旋转 ratate(deg)正值为顺时针，负值为逆时针
+
+	//倾斜 skew(deg,deg) 是元素按一定角度惊醒倾斜
+
+	//transform-origin 设置旋转的原点 默认是center center
+
+
+3D转换
+    //移动 teanslateX()  teanslateY()  teanslateZ()
+
+    //旋转 rotateX() 绕X轴旋转 rotateY() 绕Y轴旋转 rotateZ() 绕Z轴旋转
+    当图片旋转时，坐标轴也跟着转
+
+透视 perpective  让2D图像呈现3D的效果 只是辅助性帮助我们去理解元素在转换过程中的一种“视觉效果”
+    //指定给父盒子，当值越大，效果越不明显；当值越小，效果越明显
+    //作为transform属性的一个值，作用于元素自身，必须写在最前面
+
+
+transform-style指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化。
+    应用transform-style ，子元素必须设置transform属性（必须要应用3D转换）
+    //flat： 指定子元素位于此元素所在平面内
+    //preserve-3d： 指定子元素定位在三维空间内
+    //每个div有自己的3D坐标系
+
+
+backface-visbility 设置元素背面是否可见
+
+
+动画
+	//定义动画序列
+	@keyframes + 动画名{
+		from | 0%{
+			//起始状态
+		}
+		to | 100% {
+			//结束状态
+		}
+	}
+	//定义动画时，简单的动画可以直接使用关键字from和to，即从一种状态过渡到另一种状态
+	//可以使用百分数，如果复杂的动画，可以通过百分数或者混合两种去设置某个时间段内的任意时间点的样式
+
+	//调用动画
+	animation：
+	animation-name动画名
+	animation-duration时间
+	animation-iteration-count播放次数
+	animation-fill-mode播放完成后的状态
+	animation-direction逆向播放
+	animation-delay动画延时
+	animation-timing-function设置动画的播放速度
+	animation-play-state设置动画暂停
+	steps(60) 表示动画分成60步完成
+
+
+伸缩布局
+	//布局：控制元素的对齐方式
+	//伸缩布局：控制块级元素在水平和垂直方向的对齐方式
+
+	/*设置给父元素*/
+	//float:flex 指定一个盒子为伸缩盒子
+
+	//flex-deration：调整主轴方向
+	row 主轴与行内轴（水平）方向作为默认的书写模式
+	row-reverse 对齐方式与row相反
+	column 侧轴与块轴（垂直方向）方向作为默认的书写模式
+	colume-reverse 对齐方式与column相反
+
+	//justify-content 主轴方向对齐方式
+
+	//align-items 侧轴方向对齐方式
+
+	//stretch： 如果指定侧轴大小的属性值为'auto'，则其值会使项目的边距盒的尺寸尽可能接近所在行的尺寸，
+	但同时会遵照'min/max-width/height'属性的限制。
+
+	//flex-warp 该属性控制flex容器是单行或者多行，同时横轴的方向决定了新行堆叠的方向
+
+	//align-content 堆栈排列 对使用flex-warp：warp情况下产生的多行的对齐方式进行控制 当伸缩容器的侧轴还有多余空间时，本属性可以用来调准「伸缩行」在伸缩容器里的对齐方式，这与调准伸缩项目在主轴上对齐方式的
+	<' justify-content '> 属性类似。请注意本属性在只有一行的伸缩容器上没有效果。会将align-items覆盖掉
+
+	/*设置给子元素*/
+	//flex 控制子元素伸缩比例 分配的是剩余空间
+
+	//align-self  用来覆盖父元素设置的align-items
+
+	//order 控制子元素的顺序

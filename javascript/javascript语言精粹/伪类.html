@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>伪类</title>
+</head>
+<body>
+
+</body>
+<script>
+    Function.prototype.method = function (name, func) {
+        this.prototype[name] = func;
+        return this;
+    }
+    Function.method('new', function () {
+        var that = Object.create(this.prototype);
+        var other = this.apply(that,arguments);
+        return (typeof other === 'object'&&other) || that;
+    });
+</script>
+</html>

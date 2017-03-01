@@ -1,0 +1,87 @@
+body, caption, dd, div, dl, dt, em, fieldset, form, h1, h2, h3, h4, h5, h6, html, iframe, img, input, label, legend, li, object, ol, p, pre, span, strong, table, tbody, td, tfoot, th, thead, tr, ul {
+    border: 0 none;
+    margin: 0;
+    outline: 0 none;
+    padding: 0
+}
+
+body, html {
+    font: 12px/1.25 ΢���ź�, Microsoft YaHei, Helvetica, Tahoma, StSun, ����, SimSun, sans-serif
+}
+
+ol, ul {
+    list-style: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+:focus {
+    outline: 0
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0
+}
+
+a {
+    outline: 0;
+    text-decoration: none
+}
+
+a:hover {
+    text-decoration: none
+}
+
+.show{
+    display: block;
+}
+.hide {
+    display: none
+}
+
+.error {
+    color: red
+}
+
+/*�������*/
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1; /*IE/7/6*/
+}
+
+ul {
+    height: 20px;
+    list-style-type: none
+}
+
+ul li {
+    /*float: left;*/
+    line-height: 20px
+}
+em {
+    font-style: normal;
+}
+/*����*/
+.s-heart{
+    width: 1200px;
+    margin: 0 auto;
+    /*background: pink;*/
+    /*position: absolute;*/
+    /*left: 50%;*/
+    /*height: 100%;*/
+}
+.s-s-talent{
+    position: relative;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function obj (name,age){
+			this.name=name;
+			this.age=age;
+			
+
+		}
+		obj.prototype.show=function(){
+			console.log(this.name);
+		}
+		// function ob2(name,age){
+		// 	obj.call(this,name,age);
+		// }
+		// var obj1=new obj('zs',18);
+		// console.log(obj1)
+		// obj.prototype.show=function(){
+		// 	console.log(this.name);
+		// }
+		obj1 = new obj("123",45);
+
+		var obj2={
+			name:"js"
+		}
+		// obj1.show.call(obj2);	//123(this变成了obj2)
+		// obj.prototype.show.call(obj2);	//123(this变成了obj2)
+
+		obj1.show.call(obj2);	//报错： obj2 没有show这个方法
+		
+		//call 仅仅只是改变了当前函数调用的this值，但并不是把这个方法继承或移植到传入的第一个参数上
+	</script>
+</body>
+</html>

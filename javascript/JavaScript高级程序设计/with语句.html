@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>with语句</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var name = "laohuang"
+        var student = {
+            name:'laowang',
+            age:24
+        }
+        console.log(name);
+        with(student){
+            console.log(name);
+        }
+        function person(){
+            var person = {
+                name:'laohu'
+            }
+        }
+        with(person){
+            console.log(name);
+        }
+    </script>
+</body>
+</html>

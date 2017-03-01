@@ -1,0 +1,262 @@
+/*s-talent 投身战斗 B*/
+.s-talent {
+    background: url(../images/1%252Flegion%252Fdemonhunter%252Fsection-bg-4.jpg) no-repeat center 0;
+    height: 1200px;
+    padding-top: 160px;
+}
+
+.s-talent h2 {
+    width: 200px;
+    height: 66px;
+    text-indent: -999em;
+    /*background: red;*/
+    background: url(../images/1%252Flegion%252Fdemonhunter%252Fsprite.png) no-repeat -18px -360px;
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    margin: 0 auto 28px;
+    position: relative;
+    z-index: 2;
+}
+
+.s-talent .intro {
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    line-height: 28px;
+    z-index: 2;
+    position: relative;
+}
+
+.s-talent .role {
+    position: absolute;
+    top: 83px;
+    left: 0;
+    width: 100%;
+}
+
+.s-talent .role-l {
+    width: 591px;
+    height: 822px;
+    background: url(../images/1%252Flegion%252Fdemonhunter%252Ft.png) no-repeat;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.s-talent .role-r {
+    width: 560px;
+    height: 759px;
+    background: url(../images/1%252Flegion%252Fdemonhunter%252Fdps.png) no-repeat;
+    position: absolute;
+    top: 0;
+    right: 110px;
+}
+
+.s-talent .talent-con {
+    position: absolute;
+    top: 489px;
+    /*width: 100%;*/
+    z-index: 5;
+    left: 500px;
+}
+
+.s-talent .talent-menu {
+    text-align: center;
+}
+
+.s-talent .talent-menu a {
+    width: 153px;
+    height: 257px;
+    display: inline-block;
+    background: url(../images/1%252Flegion%252Fdemonhunter%252Fsprite.png) no-repeat -1337px -306px;
+    margin: 0 6px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.talent-menu a.talent-menu1 {
+    /*vengeance 灰色显示*/
+    background: url(../images/1%252Flegion%252Fdemonhunter%252Fsprite.png) no-repeat -1514px -306px;
+}
+
+.talent-menu a.talent-menu2 {
+    /*havoc 灰色显示*/
+    background: url(../images/1%252Flegion%252Fdemonhunter%252Fsprite.png) no-repeat -1171px -306px;
+}
+
+.s-talent .talent-menu strong {
+    padding-top: 176px;
+    display: block;
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 3px;
+}
+
+.s-talent .talent-menu strong:hover {
+    color: #e8e361;
+}
+
+.s-talent .talent-list {
+    width: 899px;
+    height: 509px;
+    margin-top: 50px;
+    /*position: absolute;*/
+    /*left: 135px;*/
+}
+
+.s-talent .talent-list ul {
+    padding: 12px 12px 12px 75px;
+    color: #fff;
+    position: relative;
+}
+
+.s-talent .talent-list li {
+    float: left;
+    width: 270px;
+    height: 60px;
+    margin-bottom: 11px;
+    position: relative;
+    cursor: pointer;
+}
+
+.s-talent .talent-list span {
+    display: block;
+    text-indent: -999em;
+    width: 154px;
+    height: 48px;
+    position: absolute;
+    top: 3px;
+    left: 63px;
+    cursor: pointer;
+}
+.jie {
+    width: 100%;
+    line-height: 20px;
+    border: 2px solid #fff;
+    padding-left: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin-left: 225px;
+    margin-top: -13px;
+    z-index: 1999;
+    position: relative;
+    display: none;
+}
+.jie em{
+    color: yellow;
+    display: block;
+}
+
+/*天赋页*/
+.vengeance {
+    background: url(../images/1%252Flegion%252Fdemonhunter%252Ftalent-vengeance.jpg) no-repeat;
+
+}
+/*天赋页*/
+.talent-con .havoc {
+
+    background: url(../images/1%252Flegion%252Fdemonhunter%252Ftalent-havoc.jpg) no-repeat;
+}
+
+/*s-talent 投身战斗 E*/
+
+
+/*s-mout 专属坐骑 B*/
+.s-mout {
+    background: url(../images/1%252Flegion%252Fdemonhunter%252Fsection-bg-5.jpg) no-repeat center 0;
+    height: 1255px;
+    padding-top: 87px;
+}
+
+.s-mout .s-heart {
+    width: 1200px;
+    position: relative;
+    left: 50%;
+    top: 0;
+    margin-left: -600px;
+}
+
+.s-mout h2 {
+    width: 379px;
+    height: 66px;
+    background: url(../images/1%252Flegion%252Fdemonhunter%252Fsprite.png) no-repeat -13px -455px;
+    text-align: center;
+    text-indent: -999em;
+    margin: 0 auto;
+}
+
+.s-mout .intro {
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    padding: 10px 0 807px;
+}
+
+.s-mout h3 {
+    width: 200px;
+    height: 68px;
+    background: url(../images/1%252Flegion%252Fmap%252Fmap-sprite.png) no-repeat -11px -550px;
+    margin: 0 auto 29px;
+    text-indent: -999em;
+}
+
+.s-mout .more-pic li {
+    display: block;
+    text-align: center;
+}
+
+.s-mout .more-pic li a {
+    width: 201px;
+    height: 122px;
+    border: 1px solid #434b33;
+    display: block;
+    margin: 0 13px;
+    float: left;
+}
+
+.s-mout .more-pic li a:hover {
+    border: 1px solid #6a8439;
+}
+
+.s-mout .more-pic a img {
+    width: 100%;
+    height: 100%;
+}
+
+/*s-mout 专属坐骑 E*/
+
+/*s-guide 章节 B*/
+.s-guide {
+    height: 139px;
+    background: url(../images/1%252Flegion%252Fsection-guide-bg.jpg) no-repeat 50% 0;
+    padding-top: 70px;
+    text-align: center;
+}
+
+.s-guide .s-heart {
+    width: 1200px;
+    position: relative;
+    left: 50%;
+    margin-left: -600px;
+    height: 100%;
+}
+
+.s-guide a {
+    width: 256px;
+    height: 56px;
+    border: 2px solid #445029;
+    display: inline-block;
+    color: #445029;
+    line-height: 56px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 50px;
+}
+
+.s-guide a:hover {
+    color: #6a8439;
+    border: 2px solid #6a8439;
+}
+
+/*s-guide 章节 E*/

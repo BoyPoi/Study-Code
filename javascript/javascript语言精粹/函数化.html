@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>函数化</title>
+</head>
+<body>
+
+</body>
+<script>
+    Function.prototype.method = function (name, func) {
+        this.prototype[name] = func;
+        return this;
+    }
+    Object.method('superior', function () {
+        var that = this, method = that[name];
+        return function () {
+            return method.apply(that,arguments);
+        };
+    });
+</script>
+</html>

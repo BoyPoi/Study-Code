@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+
+            position: relative;
+            transform-style: preserve-3D;
+            transition: all 1s;
+        }
+
+        .box > div {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: white;
+            text-align: center;
+            line-height: 200px;
+            font-size: 50px;
+            /*word-spacing: */
+        }
+
+        .front {
+            background: purple;
+            transform: translateZ(100px);
+        }
+
+        .back {
+            background: blue;
+            transform: translateZ(-100px);
+        }
+
+        .left {
+            background: pink;
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+
+        .right {
+            background: black;
+            transform: rotateY(90deg) translateZ(100px);
+        }
+
+        .top {
+            background: red;
+            transform: rotateX(90deg) translateZ(100px);
+        }
+
+        .bottom {
+            background: green;
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="front">1</div>
+    <div class="back">2</div>
+    <div class="left">3</div>
+    <div class="right">4</div>
+    <div class="top">5</div>
+    <div class="bottom">6</div>
+    <script>
+        var box = document.querySelector(".box");
+        var divs = box.children;
+        var timer = null;
+        timer = setInterval(function () {
+            var x = Math.ceil(Math.random() * 4) * 90;
+            var y = Math.ceil(Math.random() * 4) * 90;
+            var z = Math.ceil(Math.random() * 4) * 90;
+            box.style.transform = "rotateX(" + x + "deg) rotateY(" + y + "deg) rotateZ(" + z + "deg)"
+        }, 1000);
+        for (var i = 0; i < divs.length; i++) {
+            divs[i].onmouseover = function(){
+                clearInterval(timer);
+            };
+            divs[i].onmouseout = function(){
+                timer = setInterval(function(){
+                    var x = Math.ceil(Math.random()*4)*90;
+                    var y = Math.ceil(Math.random()*4)*90;
+                    var z = Math.ceil(Math.random()*4)*90;
+                    box.style.transform = "rotateX("+x+"deg) rotateY("+y+"deg) rotateZ("+z+"deg)"
+                },1000);
+            };
+        }
+    </script>
+</div>
+</body>
+</html>

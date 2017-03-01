@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+       /*  * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .wrap {
+            width: 300px;
+            margin: 100px auto 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            border: 1px solid #c0c0c0;
+            width: 300px;
+        }
+
+        th,
+        td {
+            border: 1px solid #d0d0d0;
+            color: #404060;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #09c;
+            font: bold 16px "微软雅黑";
+            color: #fff;
+        }
+
+        td {
+            font: 14px "微软雅黑";
+        }
+
+        tbody tr {
+            background-color: #f0f0f0;
+        }
+
+        tbody tr:hover {
+            cursor: pointer;
+            background-color: #fafafa;
+        }
+        .current {
+            background-color: red;
+        } */
+
+        /* div{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+        #box1{
+            position:absolute;
+            top: 50px;
+            left:50px;
+            background-color: red;
+        }
+        #box2{
+            background-color: green;
+        } */
+
+       /*select {
+           width: 100px;
+           height: 150px;
+       }*/
+
+        fieldset, img, input, button {
+        border: none;
+        padding: 0;
+        margin: 0;
+        outline-style: none;
+        }
+
+        ul, ol {
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #box {
+            width: 405px;
+            margin: 200px auto;
+            position: relative;
+        }
+
+        #txtSearch {
+            float: left;
+            width: 300px;
+            height: 32px;
+            padding-left: 4px;
+            border: 1px solid #b6b6b6;
+            border-right: 0;
+        }
+
+        #btnSearch {
+            float: left;
+            width: 100px;
+            height: 34px;
+            font: 400 14px/34px "microsoft yahei";
+            color: white;
+            background: #3385ff;
+            cursor: pointer;
+        }
+
+        #btnSearch:hover {
+            background: #317ef3;
+        }
+
+        #pop {
+            width: 303px;
+            border: 1px solid #ccc;
+            padding: 0px;
+            position: absolute;
+            top: 34px;
+        }
+
+        #pop ul li {
+            padding-left: 5px;
+        }
+
+        #pop ul li:hover {
+            background-color: #CCC;
+        }
+    </style>
+</head>
+<body>
+<!-- 百度搜索框 -->
+<div id="box">
+    <input type="text" id="txtSearch">
+    <input type="button" value="百度一下" id="btnSearch">
+</div>
+<script>
+    function $(str){
+    var arr=[];
+    if(str.indexOf("#") === 0){
+        for(var i =1;i<str.length;i++){
+            arr.push(str[i]);
+        }
+        var idName = arr.join("");
+        return document.getElementById(idName);
+    }else if(str.indexOf(".") ===0){
+        for(var i =1;i<str.length;i++){
+            arr.push(str[i]);
+        }
+        var className = arr.join("");
+        console.log(className);
+        return document.getElementsByClassName(className);
+    }else{
+        return document.getElementsByTagName(str);
+    }
+}
+    var datas = ["a", "abc", "abbbb", "abxxxx", "xyz", "abcdef", "abzzzz"];
+    var txt = $("#txtSearch");
+    var box = $("#box");
+    var btn = $("#btnSearch");
+    txt.onkeyup = function(){
+        var val = this.value;
+        var arr =[];
+        for(var i =0;i < datas.length; i++){
+            if(datas[i].indexOf(val) === 0){
+                arr.push(datas[i]);
+            }
+        }
+        var popDiv = $("#pop");
+        if(popDiv){
+            box.removeChild(popDiv);
+        }
+        if(arr.length === 0){
+            return;
+        }
+        if(val === ""){
+            return;
+        }
+        popDiv = document.createElement("div");
+        popDiv.id = "pop";
+        box.appendChild(popDiv);
+        var ul = document.createElement('ul');
+        popDiv.appendChild(ul);
+        for(var j=0;j<arr.length;j++){
+            var li =document.createElement('li');
+            ul.appendChild(li);
+            li.innerHTML = arr[j];
+        }
+        var lis = popDiv.getElementsByTagName("li");
+        for(var k= 0;k<arr.length;k++){
+            lis[k].onclick = function(){
+                txt.value = this.innerHTML;
+            }
+            lis[k].onmouseover = function(){
+                this.style.backgroundColor = "red";
+            }
+            lis[k].onmouseout = function(){
+                this.style.backgroundColor = "";
+            }
+        }
+    }
+</script>
+
+
+
+<!-- 选好友模型 -->
+<!-- <select name="" id="all" multiple="multiple">
+    <option value="">西施</option>
+    <option value="">琳琳</option>
+    <option value="">小龙龙</option>
+    <option value="">苏东坡</option>
+</select>
+<input type="button" id="btn1" value="&gt;&gt;"/>
+<input type="button" id="btn2" value="&lt;&lt;"/>
+<input type="button" id="btn3" value="&gt;"/>
+<input type="button" id="btn4" value="&lt;"/>
+<select name="" id="sel" multiple="multiple"></select>
+<script>
+   var all = $("#all");
+   var sel = $("#sel");
+   function $(str){
+       var arr=[];
+       if(str.indexOf("#") === 0){
+           for(var i =1;i<str.length;i++){
+               arr.push(str[i]);
+           }
+           var idName = arr.join("");
+           return document.getElementById(idName);
+       }else if(str.indexOf(".") ===0){
+           for(var i =1;i<str.length;i++){
+               arr.push(str[i]);
+           }
+           var className = arr.join("");
+           console.log(className);
+           return document.getElementsByClassName(className);
+       }else{
+           return document.getElementsByTagName(str);
+       }
+   }
+   function move(sour,dest,isMove){
+       var options = sour.children;
+       for(var i =0; i<options.length;i++){
+           var option = options[i];
+           if(isMove || option.selected){
+               dest.appendChild(option);
+               i --;
+           }
+       }
+   }
+    $("#btn1").onclick = function(){
+        move(all,sel,true);
+    }
+    $("#btn2").onclick = function(){
+        move(sel,all,true);
+    }
+    $("#btn3").onclick = function(){
+        move(all,sel,false);
+    }
+    $("#btn4").onclick = function(){
+        move(sel,all,false);
+    }
+</script> -->
+
+
+
+<!--动态生成文本框-->
+<!--<input type="button" value="创建" id="btn"/>
+<div id="box"></div>
+<script>
+    var btn = document.getElementById("btn");
+    var box = document.getElementById("box");
+    btn.onclick = function(){
+        var input = document.getElementById("t");
+        if(input){
+            return;
+        }
+        input = document.createElement("input");
+        input.id = "t";
+        input.type = "text";
+        box.appendChild(input); 
+    }
+</script>-->
+
+
+
+<!-- 插入元素 -->
+<!-- <script>
+    //克隆节点  要克隆的节点 .cloneNode(布尔值)
+    //如果是true表示深层克隆（把当前节点和内部所有的节点都克隆）
+    //如果是false表示浅层克隆（只克隆当前结点）
+    //克隆出来的节点和之前的节点没有关系。
+</script> -->
+
+
+
+<!-- 设置盒子层级 -->
+<!-- <div id="box1"></div>
+<div id="box2"></div>
+<script>
+    var index = 0;
+    var box1 = document.getElementById('box1');
+    var box2 = document.getElementById('box2');
+    var arr = [box1,box2];
+    for(var i = 0;i<arr.length;i++){
+        arr[i].onclick = function(){
+            index++;
+            this.style.zIndex = index;
+        } 
+    }
+</script> -->
+
+
+
+<!-- 得到所有输入框的编号
+<div id="demo">
+    <input type="text"/>
+    <input type="text"/>
+    <input type="text"/>
+    <input type="text"/>
+</div>
+<input type="button" id="btn" value="禁用"/>
+<script>
+    var btn=document.getElementById("btn");
+    var demo = document.getElementById("demo");
+    var inputs = demo.getElementsByTagName("input");
+    var txt=document.getElementById("txt");
+    for (var i = 0 ;i < inputs.length ; i++){
+        inputs[i].value = i;
+    }
+    btn.onclick = function(){
+        var array = [];
+        for(var i = 0;i < inputs.length;i++){
+            array.push(inputs[i].value);
+        }
+        console.log(array.join("-"));
+    }
+</script>-->
+
+
+
+<!--搜索框
+<input type="text" id="txt" value="奶爸盛典"/>
+<button>搜索</button>
+<script>
+    var txt = document.getElementById("txt");
+    var flag = true;
+    txt.onfocus = function() {
+        if (this.value === "奶爸盛典" && flag===true) {
+            this.value = "";
+        }
+    }
+    txt.onblur = function(){
+        if(this.value === ""){
+            this.value = "奶爸盛典";
+            flag = true;
+        }else{
+            flag = false;
+        }
+    }
+</script>-->
+
+
+
+<!-- 表单验证
+<input type="text" id="txt" style="background-color:green;"/>
+<button id="btn">发送</button>
+<script>
+    var txt = document.getElementById("txt");
+    var btn = document.getElementById("btn");
+    btn.onclick = function(){
+        if(txt.value.length<3||txt.value.length>6){
+            alert("请输入3~6位");
+            txt.style.backgroundColor = "red";
+        }else{
+            alert("正在发送");
+            txt.style.backgroundColor = "green";
+        }
+    }
+</script>-->
+
+
+
+<!-- 全选反选
+<input type="button" id="btn1" value="全选"/>
+<input type="button" id="btn2" value="不选"/>
+<input type="button" id="btn3" value="反选"/>
+<div class="wrap">
+    <table>
+        <thead>
+        <tr>
+            <th>
+                <input type="checkbox" id="j_cbAll"/>
+            </th>
+            <th>菜名</th>
+            <th>饭店</th>
+        </tr>
+        </thead>
+        <tbody id="j_tb">
+        <tr>
+            <td>
+                <input type="checkbox"/>
+            </td>
+            <td>红烧肉</td>
+            <td>田老师</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox"/>
+            </td>
+            <td>西红柿鸡蛋</td>
+            <td>田老师</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox"/>
+            </td>
+            <td>红烧狮子头</td>
+            <td>田老师</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox"/>
+            </td>
+            <td>日式肥牛</td>
+            <td>田老师</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<script>
+//    var all = document.getElementById("j_cbAll");
+//    var tbody = document.getElementById("j_tb");
+//    var checkboxes = tbody.getElementsByTagName("input");
+//    var btn1 = document.getElementById("btn1");
+//    var btn2 = document.getElementById("btn2");
+//    var btn3 = document.getElementById("btn3");
+//    btn1.onclick = function(){
+//        for(var i= 0; i < checkboxes.length; i++){
+//            checkboxes[i].checked = true;
+//        }
+//    }
+//    btn2.onclick = function(){
+//        for(var i= 0; i < checkboxes.length; i++){
+//            checkboxes[i].checked = false;
+//        }
+//    }
+//    btn3.onclick = function(){
+//        for(var i= 0; i < checkboxes.length; i++){
+//            checkboxes[i].checked = !checkboxes[i].checked;
+//        }
+//    }
+//    all.onclick = function(){
+//        for(var i= 0; i < checkboxes.length; i++){
+//            checkboxes[i].checked = all.checked;
+//        }
+//    }
+//    for(var i = 0;i<checkboxes.length;i++){
+//        checkboxes[i].onclick = function(){
+//            var flag = true;
+//            for(var i = 0 ;i <checkboxes.length;i++){
+////            if(checkboxes[i].checked === true){
+////                flag = true;
+////            }else{
+////                flag = false;
+////                break;
+////            }
+//                if(!checkboxes[i].checked){
+//                    flag = false;
+//                    break;
+//                }
+//            }
+////        if(flag === true){
+////            all.checked = true;
+////        }else{
+////            all.checked=false;
+////        }
+//        all.checked = flag;
+//        }
+//    }
+</script>-->
+
+
+
+<!-- 排他思想，选中当前按钮
+<input type="button" value="按钮"/>
+<input type="button" value="按钮"/>
+<input type="button" value="按钮"/>
+<input type="button" value="按钮"/>
+<script>
+    var inputs = document.getElementsByTagName("input");
+    for(var i = 0 ; i<inputs.length;i++){
+        inputs[i].onclick = function(){
+            for(var i = 0;i<inputs.length;i++){
+                inputs[i].className= "";
+            }
+            this.className = "current";
+        }
+    }
+</script>-->
+
+
+
+<!-- 自定义属性 -->
+<!-- <div id="box" aaa="1"></div> -->
+<!-- <script>
+    var box = document.getElementById("box");
+    // console.log(box.id);
+    // console.log(typeof box.aaa);
+    // box.removeAttribute()
+</script> -->
+
+
+<!-- 节点类型：
+nodeType:1  元素节点  元素节点的值是null
+nodeType:2  属性节点
+nodeType:3  文本节点 
+nodeType:8  注释节点
+nodeType:9  文档节点-->
+<!--<div id="box">-->
+    <!--<a href="#">汽车人</a>-->
+    <!--<a href="#">霸天虎</a>-->
+<!--</div>-->
+<!--<script>-->
+    <!--var box  = document.getElementById('box');-->
+    <!--var children = box.childNodes;-->
+    <!--var attrNode = box.getAttributeNode("id");-->
+    <!--console.log(children[0].nodeName);-->
+    <!--console.log(children[0].nodeValue);-->
+    <!--console.log(document.nodeType);-->
+<!--</script>-->
+
+
+
+<!-- 开灯关灯 -->
+<!-- <input type="button" value="关灯" id="btn">
+<script>
+    var btn = document.getElementById('btn');
+    var isOpen = true;
+    btn.onclick = function() {
+        if(isOpen) {
+            document.body.style.backgroundColor = "black";
+            this.value = "开灯";
+        } else {
+            document.body.style.backgroundColor = "white";
+            this.value = "关灯";
+        }
+        isOpen = !isOpen;
+    }
+</script> -->
+
+
+
+<!--动态创建结构的效率问题-->
+<!--<script>
+    for(var i = 0;i <= 10000; i++){
+        element.innerHTML += "<ul><li>aaaaaaa</li></ul>";
+        //拼接字符串
+        //把字符串变为文档对象
+        //把当前对象挂接到DOM树上
+        //渲染引擎根据新的DOM树重新渲染
+    }
+    /*
+    解决方法1
+     */
+    var arr =[];
+    for(var i = 0;i <= 10000; i++) {
+        //拼接字符串
+        arr.push("<ul><li>aaaaaaa</li></ul>");
+    }
+    //把字符串变为文档对象
+    //把当前对象挂接到DOM树上
+    //渲染引擎根据新的DOM树重新渲染
+    element.innerHTML += arr.join("");
+    /*
+    解决方法2
+     */
+    for(var i = 0;i <= 10000; i++){
+        var ul = document.createElement("ul");
+        element.appendChild(ul);
+        var li = document.createElement("li");
+        ul.appendChild(li);
+        li.innerHTML = "aaaa";
+    }
+</script>-->
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+	<body>
+	<script type="text/javascript">
+	function Person(){
+
+	}
+	Person.prototype= {
+		//sayHai: function () {
+			//alert("sayHai");
+		}
+	};
+
+	var friend=new Person();
+
+	var friend2=new Person();
+
+	Person.prototype={
+
+		constructor:Person,
+		name:"Nicholas",
+		age:29,
+		job:"Software Engineer",
+		sayName:function(){
+			alert("sayName");
+		}
+	};
+	var friend3 = new Person();
+	friend3.sayHai();
+	//var friend=new Person();
+	//friend.sayHai();
+	</script>
+	</body>
+</html>

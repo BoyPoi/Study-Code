@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function inherit(p) {
+	   	 	if (p == null) throw TyperError();
+	    	// if (Object.create)
+      //   	return Object.create(p);
+    		var t = typeof p;
+    		if (t !== "object" && t !== "function")
+        	throw TyperError();
+   			function f() {};
+    		f.prototype = p;
+    		return new f();
+		}
+		var a={x:1,y:2}
+		inherit(a);
+	</script>
+</body>
+</html>

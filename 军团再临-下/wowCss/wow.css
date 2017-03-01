@@ -1,0 +1,337 @@
+/*清楚默认样式*/
+blockquote, body, caption, dd, div, dl, dt, em, fieldset, form, h1, h2, h3, h4, h5, h6, html, iframe, img, input, label, legend, li, object, ol, p, pre, span, strong, table, tbody, td, tfoot, th, thead, tr, ul {
+    border: 0 none;
+    margin: 0;
+    outline: 0 none;
+    padding: 0
+}
+
+body, html {
+    font: 12px/1.25 微软雅黑, Microsoft YaHei, Helvetica, Tahoma, StSun, 宋体, SimSun, sans-serif;
+    background: black;
+}
+
+ol, ul {
+    list-style: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+:focus {
+    outline: 0
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0
+}
+
+a {
+    outline: 0;
+    text-decoration: none
+}
+
+a:hover {
+    text-decoration: none
+}
+
+.clear {
+    clear: both;
+    display: block;
+    margin: 0;
+    padding: 0
+}
+
+.clear-after:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
+
+* .clear-after {
+    zoom: 1
+}
+
+.hide {
+    display: none
+}
+
+.error {
+    color: red
+}
+
+.clearfix:after {
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+    content: "."
+}
+
+.clearfix {
+    display: block;
+    *display: inline-block
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+/*头部start*/
+.j-g-subsite{
+
+}
+.g-subsite{
+    position: fixed;
+    width: 1200px;
+    left: 50%;
+    top: 0;
+    margin-left: -600px;
+    height: 45px;
+    z-index: 999;
+}
+.m-subsite{
+    position: absolute;
+    right: 0px;
+}
+.j-share{
+    padding-top: 10px;
+}
+.j-share a{
+    float: left;
+    width: 24px;
+    height: 24px;
+    background: url("../images/Fsprite.png") no-repeat 0 0 ;
+    margin: 0 3px;
+    transition: all .3s;
+}
+.j-top{
+    /*margin-right: 350px;*/
+    width: 390px;
+    line-height: 45px;
+    font-size: 11px;
+    background-color: black;
+}
+.j-m-subnav a{
+    padding-left:25px;
+    display: inline-block;
+    color:#64812b;
+}
+.j-g-section-con .title span{
+
+}
+/*头部end*/
+/*侧边栏start*/
+.quickguide{
+    position: fixed;
+    right: 0;
+    top: 150px;
+    z-index: 999;
+}
+.quickguide a{
+    display: block;
+    height: 56px;
+    line-height: 56px;
+    font-size: 14px;
+    color:#64812b;
+    text-align: right;
+}
+.quickguide a:hover{
+    font-size: 17px;
+    color: white;
+}
+.quickguide .current{
+    font-size: 17px;
+    color: white;
+}
+.quickguide a span{
+    display: block;
+    float: right;
+    margin-left: 3px;
+    width: 54px;
+    height: 56px;
+    background: url("../images/Fsprite.png") no-repeat;
+}
+/*侧边栏end*/
+/*介绍start*/
+.j-g-section-1{
+    position: relative;
+    overflow: hidden;
+}
+.j-g-section-con{
+    position: absolute;
+    width: 1200px;
+    left: 50%;
+    top: 0;
+    margin-left: -600px;
+    text-align: center;
+    color: white;
+    height: 100%;
+}
+.j-g-section-1 .video{
+    position: absolute;
+    left: 50%;
+    margin-left: -960px;
+}
+.j-g-section-con h1.title{
+    padding-top: 125px;
+    font-size: 28px;
+    margin-bottom: 3px;
+}
+.j-g-section-con h1 span{
+    color: #99B146;
+    font-size:72px;
+    display: block;
+    background: url("../images/Frsprite.png") no-repeat -19px -30px;
+    width: 336px;
+    height: 91px;
+    text-indent: -999em;
+    margin: 5px auto 20px;
+}
+.j-g-section-con .slogan{
+    font-size: 16px;
+    line-height: 28px;
+}
+.j-g-section-con .roll-pic{
+    width: 200px;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    margin-left: -100px;
+    text-align: center;
+}
+.j-g-section-con .roll-pic img{
+    display: block;
+    margin: 0 auto 5px;
+}
+.j-g-section-con .roll-pic .roll-bg{
+    position: relative;
+    top: 52px;
+
+}
+.g-section-2{
+    height: 858px;
+    background: url("../images/Fsection-bg-2.jpg") no-repeat center 0;
+}
+.g-section-2 .g-info{
+    position: relative;
+    width: 1200px;
+    left: 50%;
+    margin-left: -600px;
+    height: 100%;
+}
+.g-section-2 .g-info h2{
+    position: absolute;
+    left: 0;
+    top: 148px;
+    color:#64812b;
+    font-size: 38px;
+    width: 199px;
+    height: 67px;
+    text-indent: -999em;
+    background: url("../images/Frsprite.png") no-repeat -16px -154px;
+}
+.g-section-2 .g-info ul{
+    position: absolute;
+    left: 15px;
+    top: 245px;
+    color: white;
+}
+.g-section-2 .g-info ul li{
+    margin-bottom: 7px;
+    line-height: 25px;
+    height: 25px;
+    font-size: 16px;
+}
+.g-section-2 .g-info ul li strong{
+    float: left;
+    width: 98px;
+    text-align: center;
+    background: rgba(136,167,70,.2);
+}
+.g-section-2 .g-info ul li p{
+    float: left;
+    padding-left: 12px;
+}
+.g-section-2 .g-info .race{
+    height: 224px;
+    width: 259px;
+    position: absolute;
+    top: 421px;
+    left: 26px;
+    background: url("../images/Frsprite.png") no-repeat -824px -45px;
+}
+/*介绍end*/
+/*具体介绍start*/
+.g-feature{
+    position: relative;
+    height: 841px;
+    background: url("../images/Fsection-bg-3.jpg") no-repeat center 0;
+}
+.g-feature .j-g-section-con{
+    color:black;
+}
+.g-feature .j-g-section-con h2{
+    color:#64812b;
+    font-size: 38px;
+    width: 738px;
+    height: 68px;
+    background: url("../images/Frsprite.png") no-repeat -13px -246px;
+    margin:0 auto 69px;
+    text-indent: -999em;
+    padding-top: 16px;
+}
+.js_featureList div{
+    float: left;
+    width: 389px;
+    height: 692px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+}
+.js_featureList .msg{
+    position: absolute;
+}
+.js_featureList div span{
+    display: block;
+    height: 140px;
+    width: 140px;
+    margin: 114px auto 36px;
+}
+.js_featureList  .feature-1{
+    background: url("../images/Ffeature-bg-1.jpg") no-repeat 0 0;
+}
+.js_featureList  .feature-2{
+    background: url("../images/Ffeature-bg-2.jpg") no-repeat 0 0;
+}
+.js_featureList  .feature-3{
+    background: url("../images/Ffeature-bg-3.jpg") no-repeat 0 0;
+}
+.js_featureList  .feature-1 span{
+    background: url("../images/Frsprite.png") no-repeat -1215px -45px;
+}
+.js_featureList  .feature-2 span{
+    background: url("../images/Frsprite.png") no-repeat -1389px -45px;
+}
+.js_featureList  .feature-3 span{
+    background: url("../images/Frsprite.png") no-repeat -1555px -45px;
+}
+.js_featureList div strong{
+    color:#64812b;
+    font-size: 28px;
+}
+.js_featureList div p{
+    font-size: 16px;
+    line-height: 28px;
+    margin: 20px auto;
+    width: 260px;
+    color: white;
+    top: 0px;
+}
+/*具体介绍end*/

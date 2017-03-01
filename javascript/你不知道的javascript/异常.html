@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<script >
+		function foo(a) {
+			console.log( a + b );
+			b = a;
+		}
+		foo( 2 );     // 抛出 ReferenceError异常   b is not defined
+	</script>
+</body>
+</html>

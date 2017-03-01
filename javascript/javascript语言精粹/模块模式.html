@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>模块模式</title>
+</head>
+<body>
+	
+</body>
+<script>
+	var serial_maker = function () {
+		var prefix = "";
+		var seq = 0;
+		return {
+			set_prefix : function (p) {
+				prefix = String(p);
+			},
+			set_seq : function (s) {
+				seq = s;
+			},		
+			gensym : function () {
+				var result = prefix + seq;
+				seq += 1;
+				return result;
+			}
+		};
+	};
+	var suqer = serial_maker();
+	suqer.set_seq = function () {
+		console.log(seq);    
+	}
+	suqer.set_seq();
+</script>
+</html>

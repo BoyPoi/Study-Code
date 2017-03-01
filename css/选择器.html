@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		/*div {
+			color: red;
+		}*/
+		/*#grandson {
+					font-size: 30px;
+		}*/
+		/*.sonP {
+			font-weight: bold;
+		}*/
+		/*.son1,.son2,.sonP {
+			color: green;
+		}*/
+		/*p.sonP {
+			background: pink;
+		}*/
+		/*.father .son2 {
+			background: purple;
+		}*/
+		/*.father>.son1 {
+			background: orange;
+		}*/
+	</style>
+</head>
+<body>
+	<div class="father">
+        我是father
+    	<div class="son1">
+        	我是div.father的儿子div.son1
+        	<div id="grandson">
+                我是唯一的孙子
+        	</div>
+     	</div>
+    	<div class="son2">
+        	我是div.father的儿子div.son2
+    	</div>
+        <p class="sonP">
+            我是div.father的儿子p
+        </p>
+    </div>
+    <p>我是div.father的兄弟p</p>
+    <p>我是div.father的另外一个兄弟</p>
+</body>
+</html>

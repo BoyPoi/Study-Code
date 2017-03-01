@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function SuperType(name){
+			this.name = name;
+		}
+		function SubType(){
+		//继承了 SuperType，同时还传递了参数
+		SuperType.call(this, "Nicholas"); //没有new 所以只是个函数调用 因此不能访问SuperType的原型
+		
+		//实例属性
+			this.age = 29;
+		}
+		var instance = new SubType();
+		console.log(instance);
+		alert(instance.name); //"Nicholas";
+		alert(instance.age); //29
+	</script>
+</body>
+</html>

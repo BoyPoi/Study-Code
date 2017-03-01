@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+// "foo"函数里的alert没有改变
+// 但每次激活调用的时候this是不同的
+
+// function foo() {
+    //     alert(this);
+    //
+//}
+
+// // caller 激活 "foo"这个callee，
+// // 并且提供"this"给这个 callee
+
+// // foo();
+// 全局对象
+// // foo.prototype.constructor();
+
+// foo.prototype
+
+// var bar = {
+    //     baz: foo
+    //
+//};
+// // bar.baz();
+// bar
+
+// // (bar.baz)();
+// also bar
+// (bar.baz = bar.baz)();
+// 这是一个全局对象
+// (bar.baz, bar.baz)();
+// 也是全局对象
+// (false || bar.baz)();
+// 也是全局对象
+
+// var otherFoo = bar.baz;
+// otherFoo();
+// 还是全局对象
+
+
+
+with ( {
+    foo:function () {
+        alert(this.x);
+    }
+
+    , x: 20
+}
+
+) {
+    var x = 10;
+    foo();
+    // 20
+}
+
+</script>
+
+</html>

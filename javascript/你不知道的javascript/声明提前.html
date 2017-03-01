@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>声明提前</title>
+</head>
+<body>
+	<script>
+	// var a = true;
+	// if (a) {
+	// 	var foo =function foo() { console.log("a"); }
+	//  } 
+	// else {
+	// 	var foo = function foo() { console.log("b"); }
+	// }
+	(function foo() {
+		console.log("c");     
+	})
+	//
+	//
+	//console.log(foo);
+	foo();//ie10以下结果为b，谷歌与火狐、edge为foo is not function
+	</script>
+</body>
+</html>

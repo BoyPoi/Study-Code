@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>检索元素文本内容的通用函数</title>
+</head>
+<body>
+	
+</body>
+<script>
+	function text (elem) {
+		var t = '';
+		e = e.childNodes || e;
+		for( var j =0 ; j < elem.length ; j++ ){
+			t += e[j].nodeType !=1? e[j].nodeValue : text(e[j].childNodes);
+		}
+		return t;
+	}
+</script>
+</html>

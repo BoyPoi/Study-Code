@@ -1,0 +1,6 @@
+table.cal{border-collapse: separate;border-spacing: 0;text-align: center;color: #333;}
+.cal th,.cal td{margin: 0;padding: 0;}
+.cel caption [rel="prev"]{float: left;margin-left:0.2em;}
+.cel caption [rel="next"]{float: right;margin-right: 0.2em;}
+.cal caption a:link,.cal caption a:visited{text-decoration: none;color: #333;padding: 0 0.2em;}
+.cal caption a:hover,.cel caption a:active,.cel caption a:focus{background-color:#6d8ab7; }

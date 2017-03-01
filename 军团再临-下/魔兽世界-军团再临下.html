@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/css.css"/>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="wowCss/wow.css"/>
+    <script type="text/javascript" src="js/jquery-1.12.2.min.js"></script>
+</head>
+<body>
+<!--头部start-->
+<div class="j-g-subsite">
+    <div class="g-subsite">
+        <div class="m-subsite">
+            <div class="j-top fr clearfix">
+                <div class="j-share fr" id="share">
+                    <a href="javascript:void(0);"></a>
+                    <a href="javascript:void(0);"></a>
+                    <a href="javascript:void(0);"></a>
+                </div>
+                <div class="j-m-subnav fl">
+                    <a href="#">登录</a>
+                    <a href="">进入官网</a>
+                    <a href="#">注册账号</a>
+                    <a href="#">游戏下载</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var share = document.getElementById('share');
+        var icons = share.getElementsByTagName('a');
+        for (var i = 0; i < icons.length; i++) {
+            icons[i].style.backgroundPositionX = -25 * i + "px";
+            icons[i].onmouseover = function () {
+                this.style.backgroundPositionY = "-25px";
+            }
+            icons[i].onmouseout = function () {
+                this.style.backgroundPositionY = "0px";
+            }
+        }
+    </script>
+    <!--头部end-->
+    <!--侧边栏start-->
+    <div class="quickguide">
+        <ul id="guide">
+            <li><a href="#"><strong>首页</strong><span></span></a></li>
+            <li><a href="#"><strong>崭新的世界</strong><span></span></a></li>
+            <li><a href="#" class="current"><strong>恶魔猎手</strong><span></span></a></li>
+            <li><a href="#"><strong>神器</strong><span></span></a></li>
+            <li><a href="#"><strong>职业大厅</strong><span></span></a></li>
+            <li><a href="#"><strong>新的旅程</strong><span></span></a></li>
+            <li><a href="#"><strong>全新荣誉系统</strong><span></span></a></li>
+            <li><a href="#"><strong>更多功能</strong><span></span></a></li>
+        </ul>
+    </div>
+    <script>
+        var ul = document.getElementById('guide');
+        var as = ul.getElementsByTagName('a');
+        var spans = ul.getElementsByTagName("span");
+        for (var i = 0; i < as.length; i++) {
+            as[i].num = i;
+            spans[i].style.backgroundPosition = "-10px " + (-119 - 58 * i) + "px";
+            if (as[i].className) {
+                var ass = as[i];
+                var styl = as[i].className;
+                spans[ass.num].style.backgroundPositionX = "-74px";
+            }
+            as[i].onmouseover = function () {
+                for (var j = 0; j < as.length; j++) {
+                    as[j].className = "";
+                    spans[j].style.backgroundPosition = "-10px" + (-119 - 58 * j) + "px";
+                }
+                this.className = "current";
+                ass.className = styl;
+                spans[this.num].style.backgroundPositionX = "-74px"
+            };
+            as[i].onmouseout = function () {
+                this.className = "";
+                ass.className = styl;
+                spans[this.num].style.backgroundPositionX = "-10px";
+                spans[ass.num].style.backgroundPositionX = "-74px";
+            }
+        }
+    </script>
+    <!--侧边栏end-->
+    <!--介绍start-->
+    <div class="j-g-section-1" style="height: 915px">
+        <div class="video">
+            <video autoplay="autoplay" loop="true" preload="auto" width="1920">
+                <source src="%E3%80%8A%E9%AD%94%E5%85%BD%E4%B8%96%E7%95%8C%EF%BC%9A%E5%86%9B%E5%9B%A2%E5%86%8D%E4%B8%B4%E3%80%8B_files/demonhunter.webm"
+                        type="video/webm">
+                <source src="%E3%80%8A%E9%AD%94%E5%85%BD%E4%B8%96%E7%95%8C%EF%BC%9A%E5%86%9B%E5%9B%A2%E5%86%8D%E4%B8%B4%E3%80%8B_files/demonhunter.mp4"
+                        type="video/mp4">
+            </video>
+        </div>
+        <div class="j-g-section-con">
+            <h1 class="title">全新英雄职业<span>恶魔猎手</span></h1>
+
+            <div class="slogan">
+                <p>恶魔猎手自愿接受了来自燃烧军团的禁忌力量。</p>
+
+                <p>他们驾驭邪能与混乱魔法，掌握了变身能力与幽灵视觉，</p>
+
+                <p>依靠令人生畏的敏捷追猎与抵御最危险的对手。</p>
+            </div>
+            <p class="roll-pic"><img
+                    src="%E3%80%8A%E9%AD%94%E5%85%BD%E4%B8%96%E7%95%8C%EF%BC%9A%E5%86%9B%E5%9B%A2%E5%86%8D%E4%B8%B4%E3%80%8B_files/roll.png"
+                    class="roll-bg"><img
+                    src="%E3%80%8A%E9%AD%94%E5%85%BD%E4%B8%96%E7%95%8C%EF%BC%9A%E5%86%9B%E5%9B%A2%E5%86%8D%E4%B8%B4%E3%80%8B_files/roll.gif">鼠标滚轮向下滑动
+            </p>
+        </div>
+    </div>
+    <div class="g-section-2">
+        <div class="g-info">
+            <h2>恶魔之力</h2>
+            <ul>
+                <li><strong>类型</strong>
+
+                    <p>近战伤害输出，坦克</p></li>
+                <li><strong>状态栏</strong>
+
+                    <p>生命值，狂怒值，痛苦值</p></li>
+                <li><strong>可用的护甲</strong>
+
+                    <p>布甲，皮甲</p></li>
+                <li><strong>可用的武器</strong>
+
+                    <p>战刃，匕首，拳套，<br>单手斧，单手锤，单手剑</p></li>
+            </ul>
+            <div class="race"></div>
+        </div>
+    </div>
+    <!--介绍end-->
+    <!--具体介绍start-->
+    <div class="g-feature">
+        <div class="j-g-section-con">
+            <h2>追踪你的猎物，成为强大的恶魔猎手</h2>
+
+            <div class="js_featureList" id="featureList">
+                <div class="feature-1">
+                    <div class="video" style="display: none;">
+                        <video autoplay="autoplay" loop="true" preload="auto" width="" height="">
+                            <source src="images/Ffeature-1.webm"
+                                    type="video/webm">
+                            <source src="images/Ffeature-1.mp4"
+                                    type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="msg">
+                        <span></span>
+                        <strong>幽灵视觉</strong>
+
+                        <p>恶魔猎手虽然表面上失去了双眼，但这让他们获得了真正的感知能力。他们可以依靠这种扩展后的视野察觉敌人的所在，哪怕那些躲在障碍物后面的敌人也无法逃脱。</p>
+                    </div>
+                </div>
+                <div class="feature-2">
+                    <div class="video" style="display: none;">
+                        <video autoplay="autoplay" loop="true" preload="auto" width="" height="">
+                            <source src="images/Ffeature-2.webm"
+                                    type="video/webm">
+                            <source src="images/Ffeature-2.mp4"
+                                    type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="msg">
+                        <span></span>
+                        <strong>恶魔变身</strong>
+
+                        <p>恶魔猎手可以变身成恐怖的形态，增强他们所选择的能力。追逐伤害的恶魔猎手可以获得超乎想象的迅捷与伤害力量，更轻松的完成捕猎；而专注于防御的恶魔猎手在变身形态下会变得几乎无法被杀死。</p>
+                    </div>
+                </div>
+                <div class="feature-3">
+                    <div class="video" style="display: none;">
+                        <video autoplay="autoplay" loop="true" preload="auto" width="389" height="692">
+                            <source src="images/Ffeature-3.webm"
+                                    type="video/webm">
+                            <source src="images/Ffeature-3.mp4"
+                                    type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="msg">
+                        <span></span>
+                        <strong>无与伦比的机动性</strong>
+
+                        <p>恶魔猎手可以使用二段跳，冲入战场或从混战中脱身，甚至可以展开他们那可怕的双翼进行滑翔，从敌人上空发动奇袭。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $("#featureList > div").mouseenter(function () {
+                $(this).children(".video").siblings().stop().animate({top: "-200px"}, 200).fadeOut(200).end().css("display", "block");
+            });
+            $("#featureList > div").mouseleave(function () {
+                $(this).children(".video").siblings().stop().animate({top: 0}, 200).fadeIn(200).end().css("display", "none");
+            });
+        });
+        //    var featureList = document.getElementById("featureList");
+        //    var feature = featureList.children;
+        //    var timer = null;
+        //    var parency = 1;
+        //    for (var i = 0; i < feature.length; i++) {
+        //        feature[i].num = i;
+        //        feature[i].onmouseover = function () {
+        //            var pic = this.getElementsByTagName('span')[0];
+        //            var msg = this.getElementsByTagName('p')[0];
+        //            var titl = this.getElementsByTagName('strong')[0];
+        //            var viedo = this.children[0];
+        //            pic.style.transition = "all .5s"
+        //            pic.style.opacity = "0";
+        //            pic.style.transform = "translate(0,-200px)";
+        //            msg.style.transition = "all .5s"
+        //            msg.style.opacity = "0";
+        //            msg.style.transform = "translate(0,-200px)";
+        //            titl.style.transition = "all .5s"
+        //            titl.style.opacity = "0";
+        //            titl.style.transform = "translate(0,-200px)";
+        //            viedo.style.display = "block";
+        //        }
+        //        feature[i].onmouseout = function () {
+        //            var pic = this.getElementsByTagName('span')[0];
+        //            var msg = this.getElementsByTagName('p')[0];
+        //            var titl = this.getElementsByTagName('strong')[0];
+        //            var viedo = this.children[0];
+        //            pic.style = "";
+        //            msg.style = "";
+        //            titl.style = "";
+        //            viedo.style.display = "none";
+        //        }
+        //    }
+    </script>
+</div>
+<!--具体介绍end-->
+<div class="s-s-talent">
+    <div class="s-talent">
+        <div class="s-heart">
+            <h2>投身战斗</h2>
+
+            <div class="intro">
+                <p>抛弃了沉重的护甲，恶魔猎手专注于速度的提升，</p>
+
+                <p>他们可以用最快的速度缩短于敌人的距离，</p>
+
+                <p>用单手武器对其发动致命的打击，</p>
+
+                <p>同时，伊利达雷也可以利用敏捷的身法进行防御</p>
+
+                <p>保证战斗向他们希望的方向发展。</p>
+            </div>
+            <!-- 两个背景英雄 b-->
+            <div class="role">
+                <span class="role-l"></span>
+                <span class="role-r"></span>
+            </div>
+            <!-- 两个背景英雄 e-->
+
+            <div class="talent-con">
+                <p class="talent-menu" id="talent-menu">
+                    <a href="javascript:void (0);" class="talent-menu1" id="menu1"><strong>复仇专精</strong>(坦克)</a>
+                    <a href="javascript:void (0);" class="talent-menu2" id="menu2"><strong>浩劫专精</strong>(伤害输出)</a>
+                </p>
+                <!-- 复仇 vengeance-->
+                <div class="talent-list vengeance" id="menu1-vengeance" style="display: block;">
+                    <ul>
+                        <li><span>深渊打击</span>
+
+                            <div class="jie" id="jie">
+                                <strong>深渊打击</strong>
+
+                                <p>被动</p>
+                                <em>地狱火撞击的范围扩大10码，冷却时间缩短5秒</em>
+                            </div>
+                        </li>
+                        <li><span>痛苦之焰</span>
+
+                            <div class="jie">
+                                <strong>痛苦之焰</strong>
+
+                                <p>被动</p>
+                                <em>献祭光环使你的移动速度提高30%，造成的伤害提高50%。</em>
+                            </div>
+                        </li>
+                        <li><span>锋锐之刺</span>
+
+                            <div class="jie">
+                                <strong>锋锐之刺</strong>
+
+                                <p>被动</p>
+                                <em>恶魔之刺激活时，你的物理伤害提高20%，近战攻击将使目标的移动速度降低50%，持续6秒。</em>
+                            </div>
+                        </li>
+                        <li><span>灵魂盛宴</span></li>
+                        <li><span>爆燃</span></li>
+                        <li><span>火刑</span></li>
+                        <li><span>邪能之刃</span></li>
+                        <li><span>烈焰冲撞</span></li>
+                        <li><span>邪能爆发</span></li>
+                        <li><span>喂食恶魔</span></li>
+                        <li><span>破裂</span></li>
+                        <li><span>裂魂</span></li>
+                        <li><span>集结咒符</span></li>
+                        <li><span>锁链咒符</span></li>
+                        <li><span>快速咒符</span></li>
+                        <li><span>邪能毁灭</span></li>
+                        <li><span>剑刃扭转</span></li>
+                        <li><span>幽魂炸弹</span></li>
+                        <li><span>最后一搏</span></li>
+                        <li><span>虚空联结</span></li>
+                        <li><span>灵魂壁障</span></li>
+                    </ul>
+                </div>
+                <!-- 浩劫 havoc-->
+                <div class="talent-list havoc" id="menu2-havoc" style="display: none;">
+                    <ul>
+                        <li><span>痛苦之焰</span></li>
+                        <li><span>深渊打击</span></li>
+                        <li><span>锋锐之刺</span></li>
+                        <li><span>灵魂盛宴</span></li>
+                        <li><span>爆燃</span></li>
+                        <li><span>火刑</span></li>
+                        <li><span>邪能之刃</span></li>
+                        <li><span>烈焰冲撞</span></li>
+                        <li><span>邪能爆发</span></li>
+                        <li><span>喂食恶魔</span></li>
+                        <li><span>破裂</span></li>
+                        <li><span>裂魂</span></li>
+                        <li><span>集结咒符</span></li>
+                        <li><span>锁链咒符</span></li>
+                        <li><span>快速咒符</span></li>
+                        <li><span>邪能毁灭</span></li>
+                        <li><span>剑刃扭转</span></li>
+                        <li><span>幽魂炸弹</span></li>
+                        <li><span>最后一搏</span></li>
+                        <li><span>虚空联结</span></li>
+                        <li><span>灵魂壁障</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/javascript.js"></script>
+<!--专属坐骑-->
+<div class="s-mout">
+    <div class="s-heart">
+        <h2>专属坐骑-邪刃豹</h2>
+
+        <p class="intro">来自伊利丹●怒风奖赏的礼物，只给予那些赢得他信任的恶魔猎手</p>
+
+        <h3>更多展示</h3>
+
+        <div class="more-pic">
+            <ul>
+                <li>
+                    <a href="javascript:;"><img src="images/demonhunter-pic-1.jpg" alt=""/></a>
+                    <a href="javascript:;"><img src="images/demonhunter-pic-2.jpg" alt=""/></a>
+                    <a href="javascript:;"><img src="images/demonhunter-pic-3.jpg" alt=""/></a>
+                    <a href="javascript:;"><img src="images/demonhunter-pic-4.jpg" alt=""/></a>
+                    <a href="javascript:;"><img src="images/demonhunter-pic-5.jpg" alt=""/></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--章节-->
+<div class="s-guide">
+    <div class="s-heart">
+        <a href="#">上一章节：崭新的世界</a>
+        <a href="#">下一章节：神器</a>
+    </div>
+</div>
+
+</body>
+</html>
