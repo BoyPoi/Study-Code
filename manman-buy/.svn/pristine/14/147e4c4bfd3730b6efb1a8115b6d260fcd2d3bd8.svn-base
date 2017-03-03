@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>白菜价-淘宝内部券</title>
+    <script src="./lib/less/less.min.js"></script>
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="shortcut icon" href="./images/logo.png" />
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/baicaijia.css">
+</head>
+
+<body>
+    <div class="cabbageTop_box" id="cabbageTop">
+        <div class="cabbageTop">
+            <a href="" class="return_icon"></a>
+
+            <h3 class="top_title">凑单品</h3>
+            <a href="" class="App-download"><img src="images/header_app.png" alt="APP下载" /></a>
+        </div>
+    </div>
+    <div class="coupon">
+        <div class="bcj-header">
+            <div class="bcj-title">
+                <div class="ul-wapper">
+                    <ul class="tab clearfix"></ul>
+                    <div class="search">
+                        <i class="icon-search"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bcj-list">
+            <ul></ul>
+        </div>
+    </div>
+    <div class="foot">
+        <div class="foottop clearfix">
+            <a href="">登录</a>
+            <a href="">注册</a>
+            <a href="#" style="border: 0;width: 40%;"><img src="./images/top.jpg" alt="" />返回顶部</a>
+        </div>
+        <div class="footbottom">
+            <p>
+                <a href="" style="color: red">手机APP下载</a>
+                <a href="">慢慢买手机版</a> -- 掌上比价平台
+            </p>
+            <p>
+                m.manmanbuy.com
+            </p>
+        </div>
+    </div>
+</body>
+<script src="lib/jquery.js"></script>
+<script src="lib/template.js"></script>
+<script src="js/swipe.js"></script>
+<script src="js/common.js"></script>
+<script src="lib/ch-url.js"></script>
+<script type="text/html" id="header">
+    {{if result}} {{each result as value index}}
+    <li class="">
+        <a href="baicaijia.html?titleid={{value.titleId}}">{{value.title}}</a>
+    </li>
+    {{/each}} {{/if}}
+</script>
+<script type="text/html" id="list">
+    {{if result}} {{each result as value index}}
+    <li class="ui-border-tb clearfix">
+        <a class="gobuy" href="http://s.click.taobao.com/lkqGHQx"></a>
+        <div class="pic">
+            {{#value.productImg}}
+        </div>
+        <div class="inf">
+            <div class="i">
+                <div class="t">
+                    {{#value.productName}}
+                </div>
+                <div class="pr">
+                    {{#value.productPrice}}
+                </div>
+            </div>
+            <div class="bottom">
+                {{#value.productCouponRemain}}
+                <div class="b">
+                    <div class="q">
+                        {{#value.productCoupon}}
+                    </div>
+                    <div class="g">
+                        {{#value.productHref}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    {{/each}} {{/if}}
+</script>
+<script>
+    $(function() {
+        var translateX;
+        var titleid = getQueryString("titleid");
+        console.log(titleid);
+        if (titleid == null) {
+            titleid = 0;
+        }
+        $.ajax({
+            url: "http://mmb.ittun.com/api/getbaicaijiatitle",
+            dataType: "json",
+            success: function(data) {
+                var html = template("header", data);
+                $(".bcj-title ul").html(html);
+                itcast.iScroll({
+                    swipeDom: $(".ul-wapper")[0],
+                    swipeType: 'x',
+                    swipeDistance: 100
+                })
+                $.each(data.result, function(i, e) {
+                    if (e.titleId == titleid) {
+                        $(".bcj-title ul li")[i].className = "active";
+                        var translateX = $(".bcj-title ul li")[i].offsetLeft;
+                        if (translateX >= $(".bcj-title ul li")[8].offsetLeft) {
+                            translateX = $(".bcj-title ul li")[8].offsetLeft
+                        }
+                        transition($(".bcj-title ul")[0], "all .2s", -translateX)
+                    }
+                })
+
+                function transition(obj, string, distance) {
+                    obj.style.webkitTransition = string;
+                    /*兼容*/
+                    obj.style.transition = string;
+                    obj.style.webkitTransform = "translateX(" + distance + "px)";
+                    obj.style.transform = "translateX(" + distance + "px)";
+                }
+            }
+        });
+        $.ajax({
+            url: "http://mmb.ittun.com/api/getbaicaijiaproduct",
+            data: {
+                titleid: titleid
+            },
+            dataType: "json",
+            success: function(data) {
+                var html = template("list", data);
+                $(".bcj-list ul").html(html);
+            }
+        });
+    })
+</script>
+
+</html>

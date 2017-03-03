@@ -1,0 +1,70 @@
+/**
+ * Created by Administrator on 2017/1/11 0011.
+ */
+$(function() {
+    //initTabs();
+    rendom($(".cabbageNav >.navOption"));
+
+    renderProduct($(".cabbageInfo"),getQueryString("titleId"))
+
+
+    function initTabs() {
+        var ul = $(".navOption");
+        var lis = ul.find("li");
+        var width = 0;
+        $.each(lis, function(i, a) {
+            width += $(a).innerWidth();
+        })
+        ul.width(width);
+        itcast.iScroll({
+            swipeDom: document.querySelector(".cabbageNav"),
+            swipeType: "x",
+            swipeDistance: 800
+        });
+    }
+
+
+    function rendom(dom) {
+        $.ajax({
+            url: "http://192.168.20.144:9090/api/getbaicaijiatitle",
+            success: function(data) {
+                var html = template("navtep", data);
+                //console.log(html);
+                dom.html(html);
+            }
+        })
+    }
+
+
+    //function rendom_info(dom){
+    //    $.ajax({
+    //        url:"http://mmb.ittun.com/api/getbaicaijiaproduct",
+    //        success:function(data){
+    //            var html = template("infotep",data);
+    //            console.log(html);
+    //        }
+    //    })
+    //}
+
+
+
+    function renderProduct(dom,id) {
+        $.ajax({
+            url: "http://192.168.20.144:9090/api/getbaicaijiaproduct",
+            data: { "titleid": id },
+            success: function(data) {
+                console.log(data);
+                var html = template("infotep", data)
+                console.log(html);
+                dom.html(html);
+
+            }
+        })
+    }
+
+    function getQueryString(key) {
+        var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)");
+        var result = window.location.search.substr(1).match(reg);
+        return result ? decodeURIComponent(result[2]) : null;
+    }
+});

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0 ,user-scalable=0"/>
+    <title>品牌大全</title>
+    <link rel="shortcut icon" href="images/logo.png"/>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/brand_w.css"/>
+</head>
+<body>
+
+<!--brand头部部分-->
+<div id="brandTop" class="top clearfix">
+    <div class="fr appdown">
+        <a href="#" title="app下载">
+            <img src="./images/header_app.png" alt="app下载"/>
+        </a>
+    </div>
+    <div class="fl logo">
+        <a href="#" title="慢慢买比价网-手机版">
+            <img src="./images/header_logo.png" alt="慢慢买比价网-手机版"/>
+        </a>
+    </div>
+</div>
+
+
+<!--brand头部搜索区-->
+<div class="top_search clearfix">
+    <input type="text" placeholder="请输入你想比价的商品" class="search_text fl"/>
+    <a href="" class="fr search_btn">搜索</a>
+</div>
+
+
+<!--brand导航部分-->
+<div class="nav">
+    <ul>
+        <li class="sort fl"><a href="index.html">首页</a></li>
+
+        <li class="sort fl"><span class="arrows">&gt;</span><a href="">品牌大全</a></li>
+    </ul>
+</div>
+
+
+<!--品牌排行区-->
+<div class="Ranking">
+    热门品牌排行
+</div>
+
+
+<!--品牌排行信息区-->
+<div class="ranking_info">
+    <ul>
+    </ul>
+</div>
+
+
+<!--brand底部部分-->
+<footer class="cabbageFoot">
+    <div class="foot_nav">
+        <ul>
+            <li class="fl"><a href="">登录</a></li>
+            <li class="fl active"><a href="">注册</a></li>
+            <li class="fl"><a href="#brandTop"><img src="images/top.jpg" class="returnToop" alt=""/>返回顶部</a></li>
+        </ul>
+    </div>
+    <div class="serve"><a href="" class="clr">手机APP下载</a><a href="" class="clb">慢慢买手机版</a>--掌上比价平台</div>
+    <div class="website">m.manmanbuy.com</div>
+</footer>
+
+
+<!--brand小广告部分-->
+<!--<div class="adlet">-->
+    <!--<a href="" class="clear"><img src="images/clear.png" alt=""/></a>-->
+
+    <!--<div class="man_logo">-->
+        <!--<img src="images/logo.png" height="50" alt=""/>-->
+        <!--<span class="open">立即打开</span>-->
+    <!--</div>-->
+<!--</div>-->
+<script src="lib/jquery.js"></script>
+<script src="lib/template.js"></script>
+<script src="js/brand品牌大全.js"></script>
+<script type="text/html" id="ranking">
+    <div class="ranking_info">
+        <ul>
+            {{each result as value}}
+            <li class="ranking_nav"><a href="brand.html?brandtitleid={{value.brandTitleId}}">{{value.brandTitle}}<span class="down">&lt;</span></a></li>
+            {{/each}}
+        </ul>
+    </div>
+</script>
+</body>
+</html>

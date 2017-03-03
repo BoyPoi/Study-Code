@@ -1,0 +1,1 @@
+body{background-color:#fff}.nav{max-width:300px;margin:10px auto 0}.nav a{float:left;border:1px solid #bfbfbf;background-color:#f4f4f4;margin:0 5px 5px 0;padding:10px 8px;font-size:14px}.nav a img{float:left;margin-right:5px}

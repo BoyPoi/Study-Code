@@ -1,0 +1,76 @@
+.jxhdc {
+  padding-bottom: 10px;
+}
+.jxhdc .cxdiv {
+  background-color: #fff;
+  text-align: left;
+  font-size: 14px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.jxhdc .cxdiv ul {
+  list-style: none;
+}
+.jxhdc .cxdiv ul li {
+  padding: 14px 8px;
+  position: relative;
+  border-bottom: 1px solid #e6e6e6;
+}
+.jxhdc .cxdiv ul li a {
+  display: block;
+}
+.jxhdc .cxdiv ul li a .pic {
+  width: 110px;
+}
+.jxhdc .cxdiv ul li a .pic img {
+  width: 100px;
+  height: 100px;
+}
+.jxhdc .cxdiv ul li a .info {
+  padding-left: 110px;
+  font-size: 14px;
+  line-height: 24px;
+}
+.jxhdc .cxdiv ul li a .info .title {
+  color: #333;
+  font-size: 15px;
+  line-height: 19px;
+  min-height: 57px;
+  text-align: left;
+}
+.jxhdc .cxdiv ul li a .info .title span {
+  display: inline;
+  color: #ff841d;
+}
+.jxhdc .cxdiv ul li a .info .anthor {
+  margin-top: 8px;
+  color: #a1a1a1;
+}
+.jxhdc .cxdiv ul li a .info .anthor .mall,
+.jxhdc .cxdiv ul li a .info .anthor .comment {
+  font-size: 12px;
+}
+.page {
+  margin-top: 10px;
+}
+.page .w33 {
+  width: 33.33%;
+  float: left;
+  text-align: center;
+}
+.page .w33 a {
+  box-sizing: border-box;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#f1f1f1), to(#d4d4d4));
+  border: 1px solid #bababa;
+  box-shadow: 0 0 1px #666;
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 32px;
+  padding: 8px 20px;
+}
+.page .w33 #selectPage {
+  border: 1px solid #bababa;
+  font-size: 16px;
+  padding: 8px 15px;
+  height: 36px;
+}

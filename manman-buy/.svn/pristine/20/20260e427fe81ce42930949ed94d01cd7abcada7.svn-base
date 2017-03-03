@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    height: 100%;
+    min-width: 300px;
+}
+body{
+    height: 100%;
+}
+
+/*白菜价top头部部分*/
+.cabbageTop_box {
+    width: 100%;
+}
+.cabbageTop {
+    width: 100%;
+    height: 50px;
+    margin: 0 auto;
+    background-color: red;
+    position: relative;
+}
+.cabbageTop .return_icon {
+    width: 50px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    display: block;
+    background: url(../imgs/icon_bar.png) no-repeat -87px 4px;
+    background-size: 220px 132px;
+}
+.cabbageTop .top_title {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color:white;
+    line-height: 50px;
+}
+.cabbageTop .App-download {
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 8px;
+    margin-right: 0px;
+    display: block;
+}
+.cabbageTop .App-download img {
+    width: 34px;
+    height: 34px;
+    display: block;
+}
+
+
+/*白菜价nav导航部分*/
+.cabbageNav {
+    height: 38px;
+    line-height: 38px;
+    position: relative;
+    background-color: #fff;
+    border-bottom: 1px solid #EEEEEE;
+}
+.cabbageNav .navOption li a {
+    margin: 0 12px;
+    display: block;
+    line-height: 38px;
+}
+.cabbageNav .navOption li.active a{
+    border-bottom: 2px solid red;
+}
+.cabbageNav .search {
+    width: 20px;
+    height: 20px;
+    padding: 9px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-left: 1px solid #eee;
+    background-color: #FBFBFB;
+}
+
+
+/*白菜价信息部分*/
+.cabbageInfo {
+    width: 960px;
+    background-color: #F7F7F7;
+    margin: 10px auto;
+}
+.cabbageInfo li{
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+.cabbageInfo .info_top {
+
+    padding-left: 135px;
+}
+.cabbageInfo .info_top div{
+    font-size: 14px;
+    line-height: 20px;
+}
+.cabbageInfo .info_top span {
+    margin-top: 5px;
+    font-size: 14px;
+}
+.cabbageInfo .info_top .weal{
+    font-size: 24px;
+}
+
+.cabbageInfo .info_bottom{
+    margin-top: 10px;
+    padding-left: 135px;
+}
+.cabbageInfo .info_bottom div{
+    height: 38px;
+}
+.cabbageInfo .info_bottom div .coupon {
+    width: 84px;
+    height: 27px;
+    font-size: 12px;
+    border: 1px dashed red;
+    text-align: center;
+    line-height: 27px;
+}
+.cabbageInfo .info_bottom .chaining {
+    width: 68px;
+    background-color: red;
+    color:#fff;
+    line-height: 38px;
+    text-align: center;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+.cabbageInfo .info_bottom div .oneHour {
+    font-size: 12px;
+}
+/*白菜价foot底部部分*/
+.cabbageFoot {
+    height: 120px;
+    margin-top: 20px;
+    background-color: #F7F7F7;
+}
+.cabbageFoot .AppBanner{
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #000000;
+    position: relative;
+}
+.cabbageFoot .AppBanner img{
+    width: 64px;
+}
+.cabbageFoot .AppBanner .mmApp {
+    font-size: 18px;
+    margin-left: 74px;
+    color:#FFFFFF;
+}
+.cabbageFoot .AppBanner p {
+    color:#F2E6C2;
+    font-size: 14px;
+    line-height: 20px;
+    overflow: hidden;
+    margin-left: 74px;
+}
+.cabbageFoot .AppBanner .App_Btn {
+    width: 80px;
+    height: 28px;
+    border-radius: 3px;
+    background-color: #6DB110;
+    color:#fff;
+    text-align: center;
+    line-height: 28px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.cabbageFoot .returnTop img {
+    width: 15px;
+    height: 15px;
+}

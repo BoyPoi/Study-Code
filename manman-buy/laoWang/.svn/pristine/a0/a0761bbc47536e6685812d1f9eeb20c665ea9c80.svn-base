@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0 ,user-scalable=0"/>
+        <title>优惠券</title>
+        <link rel="shortcut icon" href="images/logo.png"/>
+        <link rel="stylesheet" href="css/base.css"/>
+        <link rel="stylesheet" href="css/coupon.css"/>
+</head>
+<body>
+<!--coupon优惠券头部部分-->
+<div class="cabbageTop_box" id="cabbageTop">
+    <div class="cabbageTop">
+        <a href="" class="return_icon"></a>
+
+        <h3 class="top_title">优惠券</h3>
+        <a href="" class="App-download"><img src="images/header_app.png" alt="APP下载"/></a>
+    </div>
+</div>
+
+
+<!--coupon优惠券导航部分-->
+<div class="coupon_nav">
+    <ul class="clearfix">
+    </ul>
+</div>
+<!--<div class="prompt">&#45;&#45;点餐前出示手机中的优惠券，即可享受优惠&#45;&#45;</div>-->
+<!--<div class="details">-->
+    <!--<ul>-->
+    <!--</ul>-->
+<!--</div>-->
+
+
+<!--coupon优惠券底部部分-->
+<footer class="cabbageFoot">
+    <div class="foot_nav">
+        <ul>
+            <li class="fl"><a href="">登录</a></li>
+            <li class="fl active"><a href="">注册</a></li>
+            <li class="fl"><a href="#cabbageTop"><img src="images/top.jpg" class="returnToop" alt=""/>返回顶部</a></li>
+        </ul>
+    </div>
+    <div class="serve"><a href="" class="clr">手机APP下载</a><a href="" class="clb">慢慢买手机版</a>--掌上比价平台</div>
+    <div class="website">m.manmanbuy.com</div>
+</footer>
+
+
+
+<!--遮罩层轮播图-->
+<!--<div class="shade">-->
+    <!--<button class="close_btn"></button>-->
+    <!--<div class="banner_box">-->
+        <!--<ul class="banner">-->
+            <!--<li><img src="" alt=""/></li>-->
+        <!--</ul>-->
+    <!--</div>-->
+<!--</div>-->
+
+</body>
+<script src="lib/jquery.js"></script>
+<script src="lib/template.js"></script>
+<script src="js/coupon优惠券.js"></script>
+<script type="text/html" id="navtep">
+    <ul class="clearfix">
+        {{each result as value}}
+        <li class="fl" style="width: 118px;">
+            <a href="{{value.couponLink}}?couponid={{value.couponId}}"><img style="width: 50px;" src="{{value.couponImg}}" alt=""/>
+                <br/>{{value.couponTitle}}</a>
+        </li>
+        {{/each}}
+    </ul>
+</script>
+
+<!--<script type="text/html" id="details_tep">-->
+    <!--{{each result as value}}-->
+    <!--<li class="aaa">-->
+        <!--<a href="couponproduct-shade.html" class="clearfix">-->
+            <!--{{#value.couponProductImg}}-->
+            <!--<p class="fl">{{value.couponProductName}}</p><br/>-->
+            <!--<span class="price">{{value.couponProductPrice}}</span><br/>-->
+            <!--<span class="time">{{value.couponProductTime}}</span>-->
+        <!--</a>-->
+    <!--</li>-->
+    <!--{{/each}}-->
+<!--</script>-->
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0 ,user-scalable=0" />
+    <title>品牌大全</title>
+    <link rel="shortcut icon" href="images/logo.png" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/brand_w.css" />
+</head>
+
+<body>
+
+    <!--brand头部部分-->
+    <div id="brandTop" class="top clearfix">
+        <div class="fr appdown">
+            <a href="#" title="app下载">
+                <img src="./images/header_app.png" alt="app下载" />
+            </a>
+        </div>
+        <div class="fl logo">
+            <a href="#" title="慢慢买比价网-手机版">
+                <img src="./images/header_logo.png" alt="慢慢买比价网-手机版" />
+            </a>
+        </div>
+    </div>
+
+
+    <!--brand头部搜索区-->
+    <div class="top_search clearfix">
+        <input type="text" placeholder="请输入你想比价的商品" class="search_text fl" />
+        <a href="" class="fr search_btn">搜索</a>
+    </div>
+
+
+    <!--brand导航部分-->
+    <div class="nav">
+        <ul>
+            <li class="sort fl"><a href="">首页</a></li>
+
+            <li class="sort fl"><span class="arrows">&gt;</span><a href="">全部分类</a></li>
+        </ul>
+    </div>
+
+    <div class="info_nav">
+        <h3><a href="">平板电视哪个牌子好</a></h3>
+    </div>
+    <div class="info">
+        <ul>
+            <li>
+                <a href=""></a>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="info_nav">
+        <h3><a href="">平板电视产品销量排行</a></h3>
+    </div>
+
+
+
+    <div class="info_nav_rank">
+        <ul>
+        </ul>
+    </div>
+
+    <div class="info_nav">
+        <h3><a href="">平板电视最新评论</a></h3>
+    </div>
+    <div class="review">
+    </div>
+    <script type="text/html" id="review">
+        <ul>
+            {{each result as value}}
+            <li id="abc">
+                <a href="">
+                    <div class="review-box clearfix">
+                        <div class="pic fl"></div>
+                        <div class="text fl"></div>
+                    </div>
+                    <div class="review_text">
+                        <i class="shade"></i>
+                        <p class="clearfix">
+                            <span class="fl">{{value.comName}} : </span>
+                            <span class="fl star"></span>
+                            <span class="fr time">{{value.comTime}}</span>
+                        </p>
+                        <div>{{value.comContent}}</div>
+                    </div>
+                </a>
+            </li>
+            {{/each}}
+        </ul>
+    </script>
+
+    <!--brand底部部分-->
+    <footer class="cabbageFoot">
+        <div class="foot_nav">
+            <ul>
+                <li class="fl"><a href="">登录</a></li>
+                <li class="fl active"><a href="">注册</a></li>
+                <li class="fl">
+                    <a href="#brandTop"><img src="images/top.jpg" class="returnToop" alt="" />返回顶部</a>
+                </li>
+            </ul>
+        </div>
+        <div class="serve"><a href="" class="clr">手机APP下载</a><a href="" class="clb">慢慢买手机版</a>--掌上比价平台</div>
+        <div class="website">m.manmanbuy.com</div>
+    </footer>
+
+
+    <script src="lib/jquery.js"></script>
+    <script src="lib/template.js"></script>
+    <script src="js/brand.js"></script>
+
+
+
+
+    <script type="text/html" id="infoTep">
+        <div class="info">
+            <ul>
+                {{each result as value}}
+                <li>
+                    <a href="http://www.mmbuy.com/productlist.php?categoryid={{value.categoryId}}&category={{value.category}}&pageid=1" class="num clearfix">
+                        <san>{{value.brandId + 1}}</san>
+                        <div class="fl">
+                            <span class="brd_info">{{value.brandName}}</span><br/>
+                            <span class="sales">{{value.brandInfo}}</span>
+                        </div>
+                        <i class="fr">&gt;</i>
+                    </a>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </script>
+
+
+
+    <script type="text/html" id="nav_rank">
+        <div class="info_nav_rank">
+            <ul>
+                {{each result as value}}
+                <li class="info-ranking clearfix">
+                    <a href="bijia.html?productid={{value.productId}}" class="images">{{#value.productImg}}
+                    <div class="fr div-one">
+                        <span class="name">{{value.productName}}</span>
+                        <div class="else-info">
+                            <p class="clr">{{value.productPrice}}</p>
+                            <p class="star fr"></p>
+                            <span><p class="fl">{{value.productQuote}}</p><p class="fl">{{value.productCom}}</p></span>
+                        </div>
+                    </div>
+                </a>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </script>
+</body>
+
+</html>

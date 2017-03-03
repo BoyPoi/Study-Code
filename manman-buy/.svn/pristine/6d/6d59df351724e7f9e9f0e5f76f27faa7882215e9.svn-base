@@ -1,0 +1,41 @@
+.brief {
+  padding: 5px;
+  padding-bottom: 0;
+}
+.brief .briefin {
+  background-color: #ebebeb;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.brief .briefin .fl_t a {
+  height: 40px;
+  line-height: 40px;
+  color: #000;
+  background: url("../images/arrow1.gif") right center no-repeat;
+  display: block;
+  border-bottom: 1px solid #ccc;
+  font-weight: bold;
+  padding-left: 16px;
+  font-size: 16px;
+}
+.brief .briefin .fl_all {
+  width: 100%;
+  margin-left: -1px;
+  background-color: #f9f9f9;
+  border-bottom: 2px solid #888;
+  border-top: 2px solid #888;
+  margin-top: -1px;
+}
+.brief .briefin .fl_all td {
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  text-align: center;
+  width: 33.33%;
+  height: 40px;
+  line-height: 40px;
+}
+.brief .briefin .fl_all td a {
+  color: #333;
+  display: block;
+  font-size: 14px;
+}

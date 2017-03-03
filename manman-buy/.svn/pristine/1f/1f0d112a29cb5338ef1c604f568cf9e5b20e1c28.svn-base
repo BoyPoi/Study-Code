@@ -1,0 +1,274 @@
+html,body{
+    height: 100%;
+    min-width: 300px;
+}
+body{
+    height: 100%;
+}
+
+
+/*brand头部部分*/
+
+
+/*brand头部搜索区*/
+.top_search {
+    padding: 10px;
+    background-color: #fff;
+    position: relative;
+}
+.top_search .search_text {
+    width: 80%;
+    height: 30px;
+    font-size: 16px;
+    line-height: 30px;
+    padding-left: 75px;
+    border-radius: 15px;
+    background-color: #F1F1F1;
+}
+.top_search .search_btn {
+    padding: 0 10px;
+    height: 30px;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    color:white;
+    background-color: #FF841D;
+    border-radius: 15px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+
+/*brand导航部分*/
+.nav {
+    height: 36px;
+    font-size: 16px;
+    line-height: 36px;
+    padding-left: 10px;
+    border-top: 1px solid #CCCCCC;
+    border-bottom: 1px solid #CCCCCC;
+    background-color: #F7F7F7;
+}
+.nav .sort a{
+    padding: 10px;
+}
+
+
+
+/*品牌排行区*/
+.Ranking {
+    height: 38px;
+    border: 1px solid #CCCCCC;
+    margin: 10px 5px;
+    background-color: #EEEEEE;
+    color: #A0464D;
+    font-size: 16px;
+    line-height: 38px;
+    padding-left: 10px;
+}
+
+
+/*品牌排行信息区*/
+.ranking_info {
+    
+}
+.ranking_info .ranking_nav {
+    height: 39px;
+    border-bottom: 1px solid #CCCCCC;
+}
+.ranking_info .ranking_nav a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    color:#000;
+    font-weight: 900;
+    padding-left: 10px;
+    line-height: 39px;
+    position: relative;
+}
+.ranking_info .ranking_nav .down {
+    font-size: 24px;
+    line-height: 39px;
+    font-weight: 900;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    transform: rotate(-90deg);
+}
+
+
+
+/*brand小广告*/
+.adlet {
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;
+    padding-left: 60px;
+}
+.adlet .clear {
+    padding: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.adlet .clear img {
+    width: 30px;
+}
+.adlet .man_logo {
+    height: 60px;
+}
+.adlet .man_logo img {
+    padding-top: 5px;
+}
+.adlet .man_logo .open {
+    width: 50px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #FF7700;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    line-height: 40px;
+    position: absolute;
+    top: 10px;
+    right: 0;
+}
+
+
+
+.info ul li{
+    background-color: #fff;
+    padding: 10px;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.info ul li .num {
+    height: 0;
+}
+
+.info ul li .num san{
+    font-size: 14px;
+    line-height: 20px;
+    background-color: #c9c9c9;
+    padding: 0 5px;
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+    text-align: center;
+    color: #fff;
+}
+.info ul li:nth-child(1) .num san{
+    background-color: red;
+}
+.info ul li:nth-child(2) .num san{
+    background-color: orange;
+}
+.info ul li:nth-child(3) .num san{
+    background-color: greenyellow;
+}
+.info .num .brd_info{
+    color:#000;
+}
+.info .num .sales{
+    color:#999;
+    margin-top: 5px;
+    font-size: 14px;
+}
+.info .num i{
+    margin-top: 15px;
+    margin-right: 10px;
+}
+
+.info_nav {
+    border-top: 1px solid #C8C8C8;
+    border-bottom: 1px solid #C8C8C8;
+    background-color: #F3F3F3;
+    padding-left: 10px;
+}
+.info_nav h3 a{
+    font-size: 16px;
+    line-height: 30px;
+    display: block;
+    color:#874604;
+}
+
+
+.info_nav_rank .info-ranking{
+    background-color: #fff;
+    padding: 10px;
+    border-bottom: 1px solid #E7E7E7;
+    padding-left: 100px;
+    position: relative;
+}
+.info_nav_rank .info-ranking a img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.info_nav_rank .info-ranking .name{
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.info_nav_rank .info-ranking .div-one{
+    width: 100%;
+    overflow: hidden;
+}
+.info_nav_rank .info-ranking .else-info .clr{
+    font-size: 20px;
+    line-height: 40px;
+}
+.info_nav_rank .info-ranking .else-info .star {
+    display: block;
+    height: 18px;
+    width: 90px;
+    margin-top: -30px;
+    background-image: url(../images/star.svg);
+}
+
+
+.review #abc{
+    padding: 10px;
+    border-bottom: 1px solid #E7E7E7;
+    background-color: #fff;
+}
+.review #abc .text {
+    color:#999999;
+    font-size: 14px;
+    line-height: 30px;
+    margin-left: 20px;
+}
+.review #abc .review_text{
+    background-color: #F8F8F8;
+    padding: 10px;
+    border: 1px solid #E7E7E7;
+    position: relative;
+}
+.review #abc .review_text p{
+    margin-bottom: 10px;
+}
+.review #abc .review_text .star{
+    display: block;
+    height: 18px;
+    width: 90px;
+    margin-left: 5px;
+    margin-top: -1px;
+    background-image: url(../images/star.svg);
+}
+.review #abc .review_text .time{
+    color:#999999;
+}
+.review #abc .review_text .shade{
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-left: 1px solid #e7e7e7;
+    border-top: 1px solid #e7e7e7;
+    background-color: #F8F8F8;
+    position: absolute;
+    top: -5px;
+    left: 20px;
+    transform: rotate(45deg);
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>首页</title>
+    <link rel="stylesheet" href="./css/base.css"/>
+    <link rel="stylesheet" href="./css/index.css"/>
+    <link rel="shortcut icon" href="./img/logo.png"/>
+</head>
+<body>
+    <div class="top clearfix">
+        <div class="logo fl">
+            <a href="#" title="慢慢买比价网-手机版">
+                <img src="./img/header_logo.png" alt="慢慢买比价网-手机版"/>
+            </a>
+        </div>
+        <div class="appdown fr">
+            <a href="#" title="app下载">
+                <img src="./img/header_app.png" alt="app下载"/>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

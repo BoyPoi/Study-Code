@@ -1,0 +1,65 @@
+/**
+ * Created by Administrator on 2017/1/12 0012.
+ */
+$(function () {
+    couponRendom($(".coupon_nav>.clearfix"));
+    renderProduct($(".details>ul"), getQueryString("couponid"));
+    bannertep($(".banner_box"));
+
+
+
+});
+
+
+function couponRendom(dom) {
+    $.ajax({
+        url: "http://192.168.20.144:9090/api/getcoupon",
+        success: function (data) {
+            var html = template("navtep", data);
+            //console.log(html);
+            dom.html(html);
+        }
+    })
+}
+
+$(".coupon_nav>ul>ul>li>a").on("click", function () {
+
+    //$(".details").css("display","black");
+});
+
+function renderProduct(dom, id) {
+    $.ajax({
+        url: "http://192.168.20.144:9090/api/getcouponproduct",
+        data: {"couponid": id},
+        success: function (data) {
+            var html = template("details_tep", data)
+            dom.html(html);
+        }
+    })
+}
+
+function bannertep(dom) {
+    $.ajax({
+        url: "http://192.168.20.144:9090/api/getcouponproduct?couponid=0",
+        success: function (data) {
+            var ht = template("bannerTep", data)
+            //console.log(ht);
+            //dom.html(html);
+            dom.html(ht);
+        }
+    })
+}
+
+
+function getQueryString(key) {
+    var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)");
+    var result = window.location.search.substr(1).match(reg);
+    return result ? decodeURIComponent(result[2]) : null;
+}
+
+
+$(".close_btn").on("click", function () {
+    $(".shade").css("display", "none");
+});
+
+

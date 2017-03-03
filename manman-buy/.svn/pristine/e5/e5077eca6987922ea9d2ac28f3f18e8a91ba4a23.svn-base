@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <title>首页</title>
+    <script src="./lib/less/less.min.js"></script>
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="shortcut icon" href="./images/logo.png" />
+    <link rel="stylesheet" type="text/css" href="css/less.css" />
+</head>
+
+<body>
+    <div class="top clearfix">
+        <div class="fr appdown">
+            <a href="#" title="app下载">
+                <img src="./images/header_app.png" alt="app下载" />
+            </a>
+        </div>
+        <div class="fl logo">
+            <a href="#" title="慢慢买比价网-手机版">
+                <img src="./images/header_logo.png" alt="慢慢买比价网-手机版" />
+            </a>
+        </div>
+    </div>
+    <form action="" method="">
+        <div class="search">
+            <div class="searchtext">
+                <input type="text" placeholder="请输入你想要比价的商品" />
+            </div>
+            <div class="searchbtn">
+                <input type="submit" value="搜索" />
+            </div>
+        </div>
+    </form>
+    <div class="big-classify" id="bar">
+        <!--<div class="row clearfix">-->
+        <!--<div class="area-item">-->
+        <!--<a href="#">-->
+        <!--<div class="pic"><img src="./imgs/gengduo.png" alt=""/></div>-->
+        <!--<div class="name">更多</div>-->
+        <!--</a>-->
+        <!--</div>-->
+        <!--<div class="area-item">-->
+        <!--<a href="#">-->
+        <!--<div class="pic"><img src="./imgs/gengduo.png" alt=""/></div>-->
+        <!--<div class="name">更多</div>-->
+        <!--</a>-->
+        <!--</div>-->
+        <!--<div class="area-item">-->
+        <!--<a href="#">-->
+        <!--<div class="pic"><img src="./imgs/gengduo.png" alt=""/></div>-->
+        <!--<div class="name">更多</div>-->
+        <!--</a>-->
+        <!--</div>-->
+        <!--<div class="area-item">-->
+        <!--<a href="#">-->
+        <!--<div class="pic"><img src="./imgs/gengduo.png" alt=""/></div>-->
+        <!--<div class="name">更多</div>-->
+        <!--</a>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="row clearfix">-->
+        <!--<div class="area-item">-->
+        <!--<a href="#">-->
+        <!--<div class="pic"><img src="./imgs/gengduo.png" alt=""/></div>-->
+        <!--<div class="name">更多</div>-->
+        <!--</a>-->
+        <!--</div>-->
+        <!--<div class="area-item">-->
+        <!--<a href="#">-->
+        <!--<div class="pic"><img src="./imgs/gengduo.png" alt=""/></div>-->
+        <!--<div class="name">更多</div>-->
+        <!--</a>-->
+        <!--</div>-->
+        <!--<div class="area-item">-->
+        <!--<a href="#">-->
+        <!--<div class="pic"><img src="./imgs/gengduo.png" alt=""/></div>-->
+        <!--<div class="name">更多</div>-->
+        <!--</a>-->
+        <!--</div>-->
+        <!--<div class="area-item">-->
+        <!--<a href="#"-->
+        <!--onclick="document.getElementById('menuall').style.display == 'block'? document.getElementById('menuall').style.display = 'none':document.getElementById('menuall').style.display = 'block'">-->
+        <!--<div class="pic"><img src="./imgs/gengduo.png" alt=""/></div>-->
+        <!--<div class="name">更多</div>-->
+        <!--</a>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div id="menuall" class="row clearfix" style="display: none;">-->
+        <!--<div class="area-item">-->
+        <!--<a href="#">-->
+        <!--<div class="pic"><img src="./imgs/gengduo.png" alt=""/></div>-->
+        <!--<div class="name">更多</div>-->
+        <!--</a>-->
+        <!--</div>-->
+        <!--<div class="area-item">-->
+        <!--<a href="#">-->
+        <!--<div class="pic"><img src="./imgs/gengduo.png" alt=""/></div>-->
+        <!--<div class="name">更多</div>-->
+        <!--</a>-->
+        <!--</div>-->
+        <!--<div class="area-item">-->
+        <!--<a href="#">-->
+        <!--<div class="pic"><img src="./imgs/gengduo.png" alt=""/></div>-->
+        <!--<div class="name">更多</div>-->
+        <!--</a>-->
+        <!--</div>-->
+        <!--<div class="area-item">-->
+        <!--<a href="#">-->
+        <!--<div class="pic"><img src="./imgs/gengduo.png" alt=""/></div>-->
+        <!--<div class="name">更多</div>-->
+        <!--</a>-->
+        <!--</div>-->
+        <!--</div>-->
+    </div>
+    <div class="jxhd">
+        <span>超值折扣推荐</span>
+        <img src="./images/more.png" alt="" width="20" height="20" />
+    </div>
+    <div class="jxhdc">
+        <div class="cxdiv">
+            <ul id="products">
+                <!--<li class="clearfix ui-border-b">-->
+                <!--<a href="">-->
+                <!--<div class="pic fl">-->
+                <!--<img src=".\images\2016110012570592694.jpg" alt=""/>-->
+                <!--</div>-->
+                <!--<div class="info">-->
+                <!--<div class="title">加多宝凉茶利乐包250ml*16 整箱 <span>37.9元（买一赠一）</span></div>-->
+                <!--<div class="anthor">-->
+                <!--<div class="mall fl">京东商城 | 01-10 08:42</div>-->
+                <!--<div class="comment fr">-->
+                <!--<i class="icon-comment"></i>-->
+                <!--0-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</a>-->
+                <!--</li>-->
+                <!--<li class="clearfix ui-border-b">-->
+                <!--<a href="">-->
+                <!--<div class="pic fl">-->
+                <!--<img src=".\images\2016110012570592694.jpg" alt=""/>-->
+                <!--</div>-->
+                <!--<div class="info">-->
+                <!--<div class="title">加多宝凉茶利乐包250ml*16 整箱 <span>37.9元（买一赠一）</span></div>-->
+                <!--<div class="anthor">-->
+                <!--<div class="mall fl">京东商城 | 01-10 08:42</div>-->
+                <!--<div class="comment fr">-->
+                <!--<i class="icon-comment"></i>-->
+                <!--0-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</a>-->
+                <!--</li>-->
+                <!--<li class="clearfix ui-border-b">-->
+                <!--<a href="">-->
+                <!--<div class="pic fl">-->
+                <!--<img src=".\images\2016110012570592694.jpg" alt=""/>-->
+                <!--</div>-->
+                <!--<div class="info">-->
+                <!--<div class="title">加多宝凉茶利乐包250ml*16 整箱 <span>37.9元（买一赠一）</span></div>-->
+                <!--<div class="anthor">-->
+                <!--<div class="mall fl">京东商城 | 01-10 08:42</div>-->
+                <!--<div class="comment fr">-->
+                <!--<i class="icon-comment"></i>-->
+                <!--0-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</a>-->
+                <!--</li>-->
+                <!--<li class="clearfix ui-border-b">-->
+                <!--<a href="">-->
+                <!--<div class="pic fl">-->
+                <!--<img src=".\images\2016110012570592694.jpg" alt=""/>-->
+                <!--</div>-->
+                <!--<div class="info">-->
+                <!--<div class="title">加多宝凉茶利乐包250ml*16 整箱 <span>37.9元（买一赠一）</span></div>-->
+                <!--<div class="anthor">-->
+                <!--<div class="mall fl">京东商城 | 01-10 08:42</div>-->
+                <!--<div class="comment fr">-->
+                <!--<i class="icon-comment"></i>-->
+                <!--0-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</a>-->
+                <!--</li>-->
+                <!--<li class="clearfix ui-border-b">-->
+                <!--<a href="">-->
+                <!--<div class="pic fl">-->
+                <!--<img src=".\images\2016110012570592694.jpg" alt=""/>-->
+                <!--</div>-->
+                <!--<div class="info">-->
+                <!--<div class="title">加多宝凉茶利乐包250ml*16 整箱 <span>37.9元（买一赠一）</span></div>-->
+                <!--<div class="anthor">-->
+                <!--<div class="mall fl">京东商城 | 01-10 08:42</div>-->
+                <!--<div class="comment fr">-->
+                <!--<i class="icon-comment"></i>-->
+                <!--0-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</a>-->
+                <!--</li>-->
+                <!--<li class="clearfix ui-border-b">-->
+                <!--<a href="">-->
+                <!--<div class="pic fl">-->
+                <!--<img src=".\images\2016110012570592694.jpg" alt=""/>-->
+                <!--</div>-->
+                <!--<div class="info">-->
+                <!--<div class="title">加多宝凉茶利乐包250ml*16 整箱 <span>37.9元（买一赠一）</span></div>-->
+                <!--<div class="anthor">-->
+                <!--<div class="mall fl">京东商城 | 01-10 08:42</div>-->
+                <!--<div class="comment fr">-->
+                <!--<i class="icon-comment"></i>-->
+                <!--0-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</a>-->
+                <!--</li>-->
+                <!--<li class="clearfix ui-border-b">-->
+                <!--<a href="">-->
+                <!--<div class="pic fl">-->
+                <!--<img src=".\images\2016110012570592694.jpg" alt=""/>-->
+                <!--</div>-->
+                <!--<div class="info">-->
+                <!--<div class="title">加多宝凉茶利乐包250ml*16 整箱 <span>37.9元（买一赠一）</span></div>-->
+                <!--<div class="anthor">-->
+                <!--<div class="mall fl">京东商城 | 01-10 08:42</div>-->
+                <!--<div class="comment fr">-->
+                <!--<i class="icon-comment"></i>-->
+                <!--0-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</a>-->
+                <!--</li>-->
+                <!--<li class="clearfix ui-border-b">-->
+                <!--<a href="">-->
+                <!--<div class="pic fl">-->
+                <!--<img src=".\images\2016110012570592694.jpg" alt=""/>-->
+                <!--</div>-->
+                <!--<div class="info">-->
+                <!--<div class="title">加多宝凉茶利乐包250ml*16 整箱 <span>37.9元（买一赠一）</span></div>-->
+                <!--<div class="anthor">-->
+                <!--<div class="mall fl">京东商城 | 01-10 08:42</div>-->
+                <!--<div class="comment fr">-->
+                <!--<i class="icon-comment"></i>-->
+                <!--0-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</a>-->
+                <!--</li>-->
+            </ul>
+        </div>
+        <div class="morebar">
+            <a href="moneyctrl.html">更多优惠信息>></a>
+        </div>
+    </div>
+    <div class="jxhd" style="margin-top:10px; margin-bottom: 6px;">
+        <span>超值折扣推荐</span>
+        <img src="./images/more.png" alt="" width="20" height="20" />
+    </div>
+    <div class="foot">
+        <div class="foottop clearfix">
+            <a href="">登录</a>
+            <a href="">注册</a>
+            <a href="#" style="border: 0;width: 40%;"><img src="./images/top.jpg" alt="" />返回顶部</a>
+        </div>
+        <div class="footbottom">
+            <p>
+                <a href="" style="color: red">手机APP下载</a>
+                <a href="">慢慢买手机版</a> -- 掌上比价平台
+            </p>
+            <p>
+                m.manmanbuy.com
+            </p>
+        </div>
+    </div>
+    <div class="lg">
+        <a href="">
+            <img src="images/TB2WepTeb1J.eBjSszcXXbFzVXa_!!379516416.png" alt="" />
+        </a>
+    </div>
+    <script src="lib/jquery.js"></script>
+    <script src="lib/template.js"></script>
+    <script type="text/html" id="classify">
+        {{if result}} {{each result as value index}} {{if index%4 == 0}}
+        <div class="row clearfix">
+            <div class="area-item">
+                <a href="{{result[index].titlehref}}">
+                    <div class="pic">{{#result[index].img}}</div>
+                    <div class="name">{{result[index].name}}</div>
+                </a>
+            </div>
+            <div class="area-item">
+                <a href="{{result[index+1].titlehref}}">
+                    <div class="pic">{{#result[index+1].img}}</div>
+                    <div class="name">{{result[index+1].name}}</div>
+                </a>
+            </div>
+            <div class="area-item">
+                <a href="{{result[index+2].titlehref}}">
+                    <div class="pic">{{#result[index+2].img}}</div>
+                    <div class="name">{{result[index+2].name}}</div>
+                </a>
+            </div>
+            <div class="area-item">
+                <a href="{{result[index+3].titlehref}}">
+                    <div class="pic">{{#result[index+3].img}}</div>
+                    <div class="name">{{result[index+3].name}}</div>
+                </a>
+            </div>
+        </div>
+        {{/if}} {{/each}} {{/if}}
+    </script>
+    <script type="text/html" id="product">
+        {{if result}} {{each result as value index}}
+        <li class="clearfix ui-border-b">
+            <a href="http://www.mmbuy.com/page.php?productId={{value.productId}}">
+                <div class="pic fl">
+                    {{#value.productImgSm}}
+                </div>
+                <div class="info">
+                    <div class="title">{{value.productName}} <span>{{value.productPinkage}}</span></div>
+                    <div class="anthor">
+                        <div class="mall fl">{{value.productFrom}} | {{value.productTime}}</div>
+                        <div class="comment fr">
+                            <i class="icon-comment"></i>{{value.productComCount}}
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        {{/each}} {{/if}}
+    </script>
+    <script>
+        $(function() {
+            $.ajax({
+                url: 'http://192.168.20.144:9090/api/getindexmenu',
+                dataType: 'json',
+                success: function(data) {
+                    console.log(data);
+                    console.log(data["result"]);
+                    var html = template('classify', data);
+                    console.log(html);
+                    $('#bar').html(html);
+                    $(".big-classify .row:last").attr("id", "menuall").css("display", "none");
+                    $(".big-classify .area-item:eq(7)").on("click", function(e) {
+                        e.preventDefault();
+                        // if($("#menuall").css("display") == "block"){
+                        //      $("#menuall").css("display","none");
+                        //  }else{
+                        //      $("#menuall").css("display","block");
+                        //  }
+                        $("#menuall").slideToggle();
+
+                    });
+                }
+            });
+            $.ajax({
+                url: "http://192.168.20.144:9090/api/getmoneyctrl",
+                dataType: "json",
+                success: function(data) {
+                    var html = template('product', data);
+                    console.log(html);
+                    $('#products').html(html);
+                    console.log($(".comment"));
+                    //  $.each($(".comment"), function(i, e) {
+                    //      $(e).html('<i class="icon-comment"></i>' + /\d{1,}/.exec((data.result[i].productComCount)));
+                    //  });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

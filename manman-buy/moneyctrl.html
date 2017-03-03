@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>省钱控</title>
+    <script src="./lib/less/less.min.js"></script>
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="shortcut icon" href="./images/logo.png" />
+    <link rel="stylesheet" href="./css/moneyctrl.css">
+</head>
+
+<body>
+    <div class="cabbageTop_box" id="cabbageTop">
+        <div class="cabbageTop" style="background-color: #ff841d;">
+            <a href="javascript:history.go(-1);" class="return_icon"></a>
+
+            <h3 class="top_title">省钱控</h3>
+            <a href="index.html" class="App-download"><img src="images/header_app.png" alt="APP下载" /></a>
+        </div>
+    </div>
+    <div class="jxhdc">
+        <div class="cxdiv">
+            <ul id="products">
+            </ul>
+        </div>
+    </div>
+    <div id="pageNum" class="page clearfix">
+
+    </div>
+    <div class="foot">
+        <div class="foottop clearfix">
+            <a href="">登录</a>
+            <a href="">注册</a>
+            <a href="#" style="border: 0;width: 40%;"><img src="./images/top.jpg" alt="" />返回顶部</a>
+        </div>
+        <div class="footbottom">
+            <p>
+                <a href="" style="color: red">手机APP下载</a>
+                <a href="">慢慢买手机版</a> -- 掌上比价平台
+            </p>
+            <p>
+                m.manmanbuy.com
+            </p>
+        </div>
+    </div>
+</body>
+<script src="lib/jquery.js"></script>
+<script src="lib/template.js"></script>
+<script src="lib/ch-url.js"></script>
+<script type="text/html" id="product">
+    {{if result}} {{each result as value index}}
+    <li class="clearfix ui-border-b">
+        <a href="http://www.mmbuy.com/page.php?productId={{value.productId}}">
+            <div class="pic fl">
+                {{#value.productImgSm}}
+            </div>
+            <div class="info">
+                <div class="title">{{value.productName}} <span>{{value.productPinkage}}</span></div>
+                <div class="anthor">
+                    <div class="mall fl">{{value.productFrom}} | {{value.productTime}}</div>
+                    <div class="comment fr">
+                        <i class="icon-comment"></i> {{value.productComCount}}
+                    </div>
+                </div>
+            </div>
+        </a>
+    </li>
+    {{/each}} {{/if}}
+</script>
+<script type="text/html" id="pageHtml">
+    <div class="page clearfix">
+        <span class="w33" id="prev">
+    		<a href="">上一页</a>
+    	</span>
+        <span class="w33">
+    		<select id="selectPage" name="select">
+    					
+    		</select>
+    	</span>
+        <span class="w33" id="next">
+    		<a href="">下一页</a>
+    	</span>
+    </div>
+</script>
+<script>
+    $(function() {
+        var pageid = getQueryString("pageid");
+        if (pageid == null) {
+            pageid = 0;
+        }
+        $.ajax({
+            url: "http://192.168.20.144:9090/api/getmoneyctrl",
+            dataType: "json",
+            data: {
+                pageid: pageid
+            },
+            success: function(data) {
+                console.log(data);
+                var html = template("product", data);
+                var pageHtml = template("pageHtml");
+                $("#pageNum").html(pageHtml);
+                $("#products").html(html);
+                $("#prev a").on("click", function() {
+                    console.log(this);
+                    if (pageid <= 0) {
+                        pageid = 0;
+                    } else {
+                        pageid--;
+                    }
+                    $(this).attr("href", "http://www.mmbuy.com/moneyctrl.html?&pageid=" + pageid);
+                });
+                $("#next a").on("click", function() {
+                    console.log(this);
+                    if (pageid >= 14) {
+                        pageid = 14;
+                    } else {
+                        pageid++;
+                    }
+                    $(this).attr("href", "http://www.mmbuy.com/moneyctrl.html?&pageid=" + pageid);
+                });
+                var htm = "",
+                    page = Math.ceil(data.totalCount / data.pagesize);
+                for (var i = 0; i < page; i++) {
+                    if (i == pageid) {
+                        htm += "<option value=" + i + " selected >" + (i + 1) + "/" + page + "</option>";
+                    } else {
+                        htm += "<option value=" + i + ">" + (i + 1) + "/" + page + "</option>";
+                    }
+                }
+                $("#selectPage").html(htm).on("change", function() {
+                    pageid = $(this).val();
+                    console.log(pageid);
+                    window.location.href = "http://www.mmbuy.com/moneyctrl.html?&pageid=" + pageid;
+                });
+            }
+        });
+    })
+</script>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <title>国内折扣</title>
+    <link rel="stylesheet" href="../css/base.css"/>
+    <link rel="stylesheet" href="../css/hr_base.css"/>
+    <link rel="stylesheet" href="../css/discount-2.css"/>
+</head>
+<body>
+<!-- 头部 -->
+<div class="header">
+    <a href="#" class="fl"><span></span></a>
+
+    <div class="">国内折扣</div>
+    <a href="#" class="fr"><img src="../images/header_app.png" alt=""/></a>
+</div>
+<!-- 详情 -->
+<div class="details">
+    <!-- 动态获取的数据 -->
+</div>
+<div class="bottom">
+    <ul class="up clearfix">
+        <li><a href="">登录</a></li>
+        <li><a href="">注册</a></li>
+        <li><a href=""><span></span>返回底部</a></li>
+    </ul>
+    <div class="down">
+        <a href="">
+            <p>
+                <span>手机APP下载</span> <span>慢慢买手机版</span>
+                <span>--掌上比价平台</span>
+            </p>
+            <p>m.manmanbuy.com</p>
+        </a>
+    </div>
+</div>
+</body>
+<script src="../lib/jquery-1.12.2.min.js"></script>
+<script src="../lib/template.js"></script>
+<script src="../js/discount-2.js"></script>
+<script type="text/html" id="template">
+    {{if result}}
+    {{each result as value}}
+    <h3>{{value.productName}}</h3>
+    <h4>{{value.productPrice}}</h4>
+    <p>{{value.productFrom}}&nbsp;{{value.productTime}}&nbsp;{{value.productTips}}</p>
+    <div class="desc clearfix">
+        {{#value.productImg}}
+        <p>{{value.productInfo}}</p>
+    </div>
+    <a href=""><button>前往购买</button></a>
+    <!-- 二维码 -->
+    <div class="info">
+        <img src="../images/erweima.png" alt=""/>
+    </div>
+    <!-- 评论 -->
+    {{#value.productComment}}
+    {{/each}}
+    {{/if}}
+</script>
+</html>

@@ -1,0 +1,40 @@
+/**
+ * Created by Administrator on 2017/1/13 0013.
+ */
+$(function(){
+    entry($(".info>ul"),getQueryString("brandtitleid"));
+    navRanking($(".info_nav_rank>ul"),getQueryString("brandtitleid"));
+});
+
+function entry(dom,id){
+    $.ajax({
+        url:"http://192.168.20.144:9090/api/getbrand",
+        //url: "http://mmb.ittun.com/api/getbrand",
+        data:{"brandtitleid":id},
+        success:function(data){
+            var html = template("infoTep",data);
+            //console.log(html);
+            dom.html(html);
+        }
+    })
+}
+
+function navRanking(dom,id){
+    $.ajax({
+        url:"http://192.168.20.144:9090/api/getbrandproductlist",
+        pagesize:4,
+        data:{"brandtitleid":id},
+        success:function(data){
+            var html = template("nav_rank",data);
+            //console.log(html);
+            dom.html(html);
+        }
+    })
+}
+
+
+function getQueryString(key){
+    var reg = new RegExp("(^|&)"+key+"=([^&]*)(&|$)");
+    var result = window.location.search.substr(1).match(reg);
+    return result?decodeURIComponent(result[2]):null;
+}

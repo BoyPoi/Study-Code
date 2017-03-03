@@ -1,0 +1,57 @@
+/*ÄÚÈÝ*/
+.content {
+    background-color: #fff;
+    padding-bottom: 35px;
+}
+
+.content ul li {
+    width: 50%;
+    height: 265px;
+    float: left;
+    border: 1px solid #EEEEEE;
+    box-sizing: border-box;
+    border-top: none;
+    text-align: center;
+    padding: 10px 0 0 10px;
+}
+
+.content ul li:nth-child(even) {
+    border-left: none;
+}
+
+.content ul li a {
+    display: block;
+}
+
+.content ul li img {
+    margin: 10px 0;
+    width: 140px;
+}
+
+.content ul .name,
+.content ul .price {
+    font-size: 14px;
+    line-height: 18px;
+    overflow: hidden;
+    padding: 0 8px;
+    text-align: left;
+}
+
+.content ul .name {
+    height: 36px;
+    font-weight: 600;
+}
+
+.content ul .price {
+    height: 18px;
+    color: #FF841D;
+    padding: 4px 8px;
+}
+
+.content ul .time {
+    font-size: 12px;
+    text-align: left;
+    padding: 2px 8px;
+    color: #A1A1A1;
+}
+

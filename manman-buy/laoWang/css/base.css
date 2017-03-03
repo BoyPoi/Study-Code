@@ -1,0 +1,430 @@
+@font-face {
+    font-family: "iconfont";
+    src: url('../fonts/iconfont.eot-t=1462330651') /* IE9*/
+src: url('../fonts/iconfont.eot?t=1462330651#iefix') format('embedded-opentype') /* IE6-IE8 */
+url('../fonts/iconfont.woff?t=1462330651') format('woff'), /* chrome, firefox */
+url('../fonts/iconfont.ttf?t=1462330651') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+url('../fonts/iconfont.svg?t=1462330651#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0px;
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0px;
+}
+
+a, body, center, cite, code, dd, del, div, dl, dt, em, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hr, html, img, input, label, legend, li, mark, ol, p, section, span, strong, textarea, time, ul, var {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-style: normal;
+}
+
+body, html {
+    -webkit-touch-callout: none;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    background-color: #f2f2f2;
+    font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif !important;
+}
+
+article, aside, details, fieldset, figcaption, figure, footer, header, main, nav, section {
+    display: block
+}
+
+footer, header, section {
+    position: relative
+}
+
+ol, ul {
+    list-style: none
+}
+
+button, input, textarea {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    line-height: 1em;
+    background-color: transparent
+}
+
+span {
+    display: inline-block
+}
+
+a:active, a:hover {
+    outline: 0
+}
+
+a, a:visited {
+    text-decoration: none
+}
+
+.wordWrap, label {
+    word-wrap: break-word;
+    word-break: break-all
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+td, th {
+    padding: 0
+}
+
+.clearfix:after, .clearfix:before {
+    content: ' ';
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0
+}
+
+input::-webkit-search-cancel-button {
+    display: none;
+}
+
+input {
+    outline: none;
+}
+
+.click_opacity {
+    -khtml-opacity: 0.8;
+    opacity: 0.8;
+}
+
+a {
+    color: #5a5a5a;
+    text-decoration: none;
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0px;
+}
+
+a, body, center, cite, code, dd, del, div, dl, dt, em, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hr, html, img, input, label, legend, li, mark, ol, p, section, span, strong, textarea, time, ul, var {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-style: normal;
+}
+
+body, html {
+    -webkit-touch-callout: none;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    background-color: #f2f2f2;
+    font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif !important;
+}
+
+article, aside, details, fieldset, figcaption, figure, footer, header, main, nav, section {
+    display: block
+}
+
+footer, header, section {
+    position: relative
+}
+
+ol, ul {
+    list-style: none
+}
+
+button, input, textarea {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    line-height: 1em;
+    background-color: transparent
+}
+
+span {
+    display: inline-block
+}
+
+a:active, a:hover {
+    outline: 0
+}
+
+a, a:visited {
+    text-decoration: none
+}
+
+.wordWrap, label {
+    word-wrap: break-word;
+    word-break: break-all
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+td, th {
+    padding: 0
+}
+
+.clearfix:after, .clearfix:before {
+    content: ' ';
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0
+}
+
+input::-webkit-search-cancel-button {
+    display: none;
+}
+
+input {
+    outline: none;
+}
+
+.click_opacity {
+    -khtml-opacity: 0.8;
+    opacity: 0.8;
+}
+
+a {
+    color: #5a5a5a;
+    text-decoration: none;
+}
+
+a, body, center, cite, code, dd, del, div, dl, dt, em, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hr, html, img, input, label, legend, li, mark, ol, p, section, span, strong, textarea, time, ul, var {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-style: normal;
+}
+
+body, html {
+    -webkit-touch-callout: none;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    background-color: #f2f2f2;
+    font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif !important;
+}
+
+article, aside, details, fieldset, figcaption, figure, footer, header, main, nav, section {
+    display: block
+}
+
+footer, header, section {
+    position: relative
+}
+
+ol, ul {
+    list-style: none
+}
+
+button, input, textarea {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    line-height: 1em;
+    background-color: transparent
+}
+
+span {
+    display: inline-block
+}
+
+a:active, a:hover {
+    outline: 0
+}
+
+a, a:visited {
+    text-decoration: none
+}
+
+.wordWrap, label {
+    word-wrap: break-word;
+    word-break: break-all
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+td, th {
+    padding: 0
+}
+
+.clearfix:after, .clearfix:before {
+    content: ' ';
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0
+}
+
+input::-webkit-search-cancel-button {
+    display: none;
+}
+
+input {
+    outline: none;
+}
+
+.click_opacity {
+    -khtml-opacity: 0.8;
+    opacity: 0.8;
+}
+
+a {
+    color: #5a5a5a;
+    text-decoration: none;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clr {
+    color: #FF0000;
+}
+.clb {
+    color:black;
+}
+
+
+
+/*头部公共样式*/
+.cabbageTop_box {
+    width: 100%;
+}
+.cabbageTop {
+    width: 100%;
+    height: 50px;
+    margin: 0 auto;
+    background-color: red;
+    position: relative;
+}
+.cabbageTop .return_icon {
+    width: 50px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    display: block;
+    background: url(../images/icon_bar.png) no-repeat -87px 4px;
+    background-size: 220px 132px;
+}
+.cabbageTop .top_title {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color:white;
+    line-height: 50px;
+}
+.cabbageTop .App-download {
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 8px;
+    margin-right: 0px;
+    display: block;
+}
+.cabbageTop .App-download img {
+    width: 34px;
+    height: 34px;
+    display: block;
+}
+/*头部*/
+.top {
+    background-color: #ff841d;
+    height: 50px;
+    border-bottom: 1px solid #e6e6e6;
+}
+.top .logo {
+    width: 75%;
+    margin-left: 5px;
+    padding: 12px;
+}
+.top .logo a {
+    display: block;
+    height: 100%;
+}
+.top .logo a img {
+    max-height: 25px;
+    overflow: hidden;
+}
+.top .appdown {
+    padding: 7px;
+}
+.top .appdown a {
+    display: block;
+    height: 100%;
+}
+.top .appdown a img {
+    max-height: 34px;
+    overflow: hidden;
+}
+
+
+/*foot底部公共部分*/
+.cabbageFoot {
+    background-color: #EFEFEF;
+}
+.cabbageFoot .foot_nav {
+    height: 48px;
+    border-top: 1px solid #C4C4C4;
+    border-bottom: 1px solid #C4C4C4;
+}
+.cabbageFoot .foot_nav li {
+    width: 33%;
+    font-size: 16px;
+    line-height: 48px;
+    text-align: center;
+    display: block;
+}
+.cabbageFoot .foot_nav li a {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.cabbageFoot .foot_nav li.active a{
+    border-left: 1px solid #c4c4c4;
+    border-right: 1px solid #c4c4c4;
+}
+.cabbageFoot .foot_nav .returnToop {
+    width: 16px;
+}
+.cabbageFoot .serve {
+    margin-top: 20px;
+    text-align: center;
+}
+.cabbageFoot .website {
+    text-align: center;
+}

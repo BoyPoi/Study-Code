@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <title>国内折扣</title>
+    <link rel="stylesheet" href="../css/base.css"/>
+    <link rel="stylesheet" href="../css/discount-1.css"/>
+</head>
+<body>
+    <!-- 头部 -->
+    <div class="header">
+        <a href="#" class="fl"><span></span></a>
+        <div class="">国内折扣</div>
+        <a href="#" class="fr"><img src="../images/header_app.png" alt=""/></a>
+    </div>
+    <!-- 内容 -->
+    <div class="content clearfix">
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="../images/zao.jpg" alt=""/>
+                    <div class="name">西域美农新疆特产五星和田红枣250g*2</div>
+                    <div class="price">19.8元(5件99元)</div>
+                    <div class="time">京东商城 | 10-22 13:28</div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="../images/zao.jpg" alt=""/>
+                    <div class="name">西域美农新疆特产五星和田红枣250g*2</div>
+                    <div class="price">19.8元(5件99元)</div>
+                    <div class="time">京东商城 | 10-22 13:28</div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="../images/zao.jpg" alt=""/>
+                    <div class="name">西域美农新疆特产五星和田红枣250g*2</div>
+                    <div class="price">19.8元(5件99元)</div>
+                    <div class="time">京东商城 | 10-22 13:28</div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="../images/zao.jpg" alt=""/>
+                    <div class="name">西域美农新疆特产五星和田红枣250g*2</div>
+                    <div class="price">19.8元(5件99元)</div>
+                    <div class="time">京东商城 | 10-22 13:28</div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="../images/zao.jpg" alt=""/>
+                    <div class="name">西域美农新疆特产五星和田红枣250g*2</div>
+                    <div class="price">19.8元(5件99元)</div>
+                    <div class="time">京东商城 | 10-22 13:28</div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="../images/zao.jpg" alt=""/>
+                    <div class="name">西域美农新疆特产五星和田红枣250g*2</div>
+                    <div class="price">19.8元(5件99元)</div>
+                    <div class="time">京东商城 | 10-22 13:28</div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="../images/zao.jpg" alt=""/>
+                    <div class="name">西域美农新疆特产五星和田红枣250g*2</div>
+                    <div class="price">19.8元(5件99元)</div>
+                    <div class="time">京东商城 | 10-22 13:28</div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="../images/zao.jpg" alt=""/>
+                    <div class="name">西域美农新疆特产五星和田红枣250g*2</div>
+                    <div class="price">19.8元(5件99元)</div>
+                    <div class="time">京东商城 | 10-22 13:28</div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="../images/zao.jpg" alt=""/>
+                    <div class="name">西域美农新疆特产五星和田红枣250g*2</div>
+                    <div class="price">19.8元(5件99元)</div>
+                    <div class="time">京东商城 | 10-22 13:28</div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="../images/zao.jpg" alt=""/>
+                    <div class="name">西域美农新疆特产五星和田红枣250g*2</div>
+                    <div class="price">19.8元(5件99元)</div>
+                    <div class="time">京东商城 | 10-22 13:28</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- 底部 -->
+    <div class="bottom">
+        <ul class="up clearfix">
+            <li><a href="">登录</a></li>
+            <li><a href="">注册</a></li>
+            <li><a href=""><span></span>返回底部</a></li>
+        </ul>
+        <div class="down">
+            <a href="">
+                <p>
+                    <span>手机APP下载</span>                        <span>慢慢买手机版</span>
+                    <span>--掌上比价平台</span>
+                </p>
+                <p>m.manmanbuy.com</p>
+            </a>
+
+        </div>
+    </div>
+</body>
+</html>

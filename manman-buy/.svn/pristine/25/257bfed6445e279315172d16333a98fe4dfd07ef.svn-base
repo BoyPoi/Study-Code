@@ -1,0 +1,96 @@
+.top{
+     background-color: #ff841d;
+     /*height: 50px;*/
+     border-bottom: 1px solid #e6e6e6;
+ }
+.top .logo{
+    width: 75%;
+    margin-left: 5px;
+    padding: 12px;
+}
+.logo a,.appdown a{
+    display: block;
+    height: 100%;
+}
+.logo a img{
+    max-height: 25px;
+    overflow: hidden;
+}
+.top .appdown{
+    padding: 7px;
+}
+.appdown a img{
+    max-height: 34px;
+    overflow: hidden;
+}
+.search{
+    background-color: white;
+    height: 30px;
+    padding: 10px;
+    position: relative;
+    border-bottom: 1px solid #e6e6e6;
+}
+.searchtext input{
+    background-color: #f1f1f1;
+    width: 90%;
+    height: 30px;
+    border-radius: 15px;
+    padding-left: 5%;
+    font-size: 16px;
+    line-height: 30px;
+}
+.searchbtn input{
+    position: absolute;
+    height: 30px;
+    width: 63px;
+    color: #fff;
+    background-color: #ff841d;
+    border-radius: 15px;
+    line-height: 30px;
+    right:10px;
+    top: 10px;
+}
+.big-classify{
+    background-color: white;
+    padding: 6px 0;
+}
+.big-classify .row{
+    margin: 16px 0;
+}
+.row .area-item{
+    width: 25%;
+    float: left;
+    text-align: center;
+}
+.row .area-item a{
+    display: block;
+}
+.row .area-item a img{
+    width: 50px;
+    overflow: hidden;
+}
+.row .area-item a .name{
+    font-size: 13px;
+    margin-top: 3px;
+}
+.jxhd{
+    margin-top: 4px;
+    background-color: #ff9000;
+    background: -webkit-gradient(linear,0 0,0 100%,from(#ffaf47),to(#ff9000));
+    background: -moz-linear-gradient(top, #ffaf47, #ff9000);
+    background: -o-linear-gradient(top,#ffaf47, #ff9000);
+    padding-left: 10px;
+    height: 35px;
+    color: #fff;
+    font-weight: bold;
+    line-height: 35px;
+    font-size: 18px;
+    border-bottom: 1px solid #e6e6e6;
+}
+.jxhd span{
+    float: left;
+}
+.jxhd img{
+    float: right;
+    margin:8px 10px 0 0;
+}

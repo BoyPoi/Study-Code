@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    width: 100%;
+    min-width: 300px;
+}
+.cabbageTop {
+    width: 100%;
+    height: 50px;
+    background-color: red;
+    padding: 0 50px;
+}
+.cabbageTop .return_icon {
+    width: 50px;
+    height: 100%;
+    float: left;
+    display: block;
+}
+.cabbageTop .top_title {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color:white;
+    line-height: 50px;
+}
+.cabbageTop .App-download {
+    width: 50px;
+    height: 100%;
+    float: right;
+    display: block;
+}
+.cabbageTop .App-download img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}

@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    width: 100%;
+    min-width: 300px;
+}
+.cabbageTop_box {
+    width: 100%;
+}
+.cabbageTop {
+    width: 100%;
+    height: 50px;
+    margin: 0 auto;
+    background-color: red;
+    position: relative;
+}
+.cabbageTop .return_icon {
+    width: 50px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    display: block;
+    background: url(../imgs/icon_bar.png) no-repeat -87px 4px;
+    background-size: 220px 132px;
+}
+.cabbageTop .top_title {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color:white;
+    line-height: 50px;
+}
+.cabbageTop .App-download {
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 8px;
+    margin-right: 0px;
+    display: block;
+}
+.cabbageTop .App-download img {
+    width: 34px;
+    height: 34px;
+    display: block;
+}
+
+
+
+
+
+.cabbageFoot {
+    height: 120px;
+    margin-top: 20px;
+    background-color: #F7F7F7;
+}
+.cabbageFoot .AppBanner{
+    height: 64px;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #000000;
+}
+.cabbageFoot .AppBanner img{
+    width: 64px;
+}
+.cabbageFoot .AppBanner span {
+    width: 60%;
+    font-size: 18px;
+    margin-left: 10px;
+    color:#FFFFFF;
+}
+.cabbageFoot .AppBanner p {
+    width: 92%;
+    color:#F2E6C2;
+    font-size: 14px;
+    margin-left: 10px;
+}
+.cabbageFoot .AppBanner .App_Btn {
+    width: 80px;
+    height: 28px;
+    border-radius: 3px;
+    background-color: #6DB110;
+    color:#fff;
+    text-align: center;
+    line-height: 28px;
+}
+.cabbageFoot .returnTop img {
+    width: 15px;
+    height: 15px;
+}

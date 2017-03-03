@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0 ,user-scalable=0"/>
+    <title>白菜价</title>
+    <link rel="shortcut icon" href="images/logo.png"/>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/cabbage.css"/>
+</head>
+<body>
+
+<!--白菜价Top头部部分-->
+<div class="cabbageTop_box" id="cabbageTop">
+    <div class="cabbageTop">
+        <a href="" class="return_icon"></a>
+
+        <h3 class="top_title">白菜价·淘宝内部劵</h3>
+        <a href="" class="App-download"><img src="images/header_app.png" alt="APP下载"/></a>
+    </div>
+</div>
+
+<!--白菜价导航部分-->
+<div class="cabbageNav">
+    <ul class="navOption">
+    </ul>
+    <img src="images/search.svg" class="search" alt=""/>
+</div>
+
+<!--白菜价信息部分-->
+<div class="cabbageInfo">
+    <ul>
+    </ul>
+</div>
+
+
+<!--白菜价foot底部部分-->
+<!--<footer class="cabbageFoot">-->
+<!--<div class="foot_nav">-->
+<!--<a href="">首页</a>-->
+<!--</div>-->
+<!--<div class="AppBanner clearfix">-->
+<!--<img src="images/logo.png" alt="" class="fl"/>-->
+<!--<div class="mmApp">慢慢买APP</div>-->
+<!--<a href="" class="App_Btn fr">立即打开</a>-->
+<!--<p class="">给喜欢网购的同学推荐下[慢慢买]这个APP，第一时间更新国内外的优惠信息！</p>-->
+<!--</div>-->
+<!--<div class="returnTop"><a href="#cabbageTop"><img src="images/top.jpg" alt=""/>回到顶部</a></div>-->
+<!--<div><a href="" class="clr">手机APP下载</a> <a href="">慢慢买手机版</a>&#45;&#45;掌上比价平台</div>-->
+<!--<div>m.manmnabuy.com</div>-->
+<!--</footer>-->
+
+
+<!--白菜价foot底部部分-->
+<footer class="cabbageFoot">
+    <div class="foot_nav">
+        <ul>
+            <li class="fl"><a href="">登录</a></li>
+            <li class="fl active"><a href="">注册</a></li>
+            <li class="fl"><a href="#cabbageTop"><img src="images/top.jpg" class="returnToop" alt=""/>返回顶部</a></li>
+        </ul>
+    </div>
+    <div class="serve"><a href="" class="clr">手机APP下载</a><a href="" class="clb">慢慢买手机版</a>--掌上比价平台</div>
+    <div class="website">m.manmanbuy.com</div>
+</footer>
+
+
+<!--白菜价固定导航部分-->
+<div class="fixed_nav">
+    <a href="">
+        <img src="images/logo.png" alt=""/>
+
+        <div>App 下载</div>
+    </a>
+</div>
+
+</body>
+<script src="lib/jquery.js"></script>
+<script src="lib/template.js"></script>
+<script src="lib/underscore-min.js"></script>
+<script src="js/白菜价页面.js"></script>
+<script src="js/swipe.js"></script>
+<script type="text/html" id="navtep">
+    <div class="cabbageNav">
+        <ul class="navOption">
+            {{each result as value}}
+            <li class="fl"><a href="baicaijia.html?titleId={{value.titleId}}">{{value.title}}</a></li>
+            {{/each}}
+        </ul>
+        <!--<img src="../images/search.svg" class="search" alt=""/>-->
+    </div>
+</script>
+<script type="text/html" id="infotep">
+    <div class="cabbageInfo">
+        <ul>
+            {{each result as value}}
+            <li>
+                <a biz-itemid="538754112089" class="gobuy" isconvert="1"
+                   href="http://s.click.taobao.com/lkqGHQx" target="_blank">
+                    {{#value.productImg}}
+                    <div class="info_top">
+                        <div>{{#value.productName}}</div>
+                        <span>{{#value.productPrice}}</span>
+                    </div>
+                    <div class="info_bottom">
+                        <p class="oneHour">{{#value.productCouponRemain}}</p>
+                        <div class="chain">
+                            {{#value.productCoupon}}
+                            {{#value.productHref}}
+                        </div>
+                    </div>
+                </a>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</script>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <title>海淘折扣</title>
+    <link rel="stylesheet" href="../css/base.css"/>
+    <link rel="stylesheet" href="../css/hr_base.css"/>
+    <link rel="stylesheet" href="../css/overseas-1.css"/>
+</head>
+<body>
+    <!-- 头部 -->
+    <div class="header">
+        <a href="#" class="fl"><span></span></a>
+        <div class="">省钱控 - 最新优惠</div>
+        <a href="#" class="fr"><img src="../images/header_app.png" alt=""/></a>
+    </div>
+    <!-- 商品列表 -->
+    <div class="content">
+        <!-- 动态获取 -->
+    </div>
+    <!-- 切换页面 -->
+    <div class="change clearfix">
+        <div><button>上一页</button></div>
+        <div>
+            <select name="" id="">
+                <option value="1">1/14</option>
+                <option value="2">2/14</option>
+                <option value="3">3/14</option>
+            </select>
+        </div>
+        <div>
+            <button>下一页</button>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <div class="bottom">
+        <ul class="up clearfix">
+            <li><a href="">登录</a></li>
+            <li><a href="">注册</a></li>
+            <li><a href=""><span></span>返回底部</a></li>
+        </ul>
+        <div class="down">
+            <a href="">
+                <p>
+                    <span>手机APP下载</span>                        <span>慢慢买手机版</span>
+                    <span>--掌上比价平台</span>
+                </p>
+                <p>m.manmanbuy.com</p>
+            </a>
+
+        </div>
+    </div>
+</body>
+<script src="../lib/jquery-1.12.2.min.js"></script>
+<script src="../lib/template.js"></script>
+<script src="../js/overseas-1.js"></script>
+<script type="text/html" id="template">
+    {{if result}}
+    {{each result as value}}
+    <div class="goods">
+        <a href="">
+            {{#value.productImgSm}}
+            <div class="info">
+                <p class="title">
+                    <span>{{value.productName}}</span>
+                    <span>{{value.productPinkage}}</span>
+                </p>
+                <p class="mall">
+                    <span>{{value.productFrom}}</span>
+                    <span>{{value.productTime}}</span>
+                </p>
+                <div class="review">
+                    <i ></i>
+                    {{#value.productComCount}}
+                </div>
+            </div>
+        </a>
+    </div>
+    {{/each}}
+    {{/if}}
+</script>
+</html>

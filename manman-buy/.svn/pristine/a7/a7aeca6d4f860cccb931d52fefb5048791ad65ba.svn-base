@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>凑单品</title>
+    <script src="./lib/less/less.min.js"></script>
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="shortcut icon" href="./images/logo.png" />
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/gsproduct.css">
+</head>
+
+<body>
+    <div class="cabbageTop_box" id="cabbageTop">
+        <div class="cabbageTop" style="background-color: #ff841d;">
+            <a href="" class="return_icon"></a>
+
+            <h3 class="top_title">凑单品</h3>
+            <a href="" class="App-download"><img src="images/header_app.png" alt="APP下载" /></a>
+        </div>
+    </div>
+    <div class="gs-product">
+        <div class="list">
+            <div class="hd">
+                <div class="filter">
+                    <ul class="clearfix">
+                        <li class="on"><span></span><i class="icon-up"></i></li>
+                        <li class="on"><span></span><i class="icon-up"></i></li>
+                        <li class="on"><span>全部价格</span><i class="icon-up"></i></li>
+                    </ul>
+                </div>
+                <div class="search">
+                    <i class="icon-search"></i>
+                </div>
+                <div id="shop" class="popbox" style="display: none"></div>
+                <div id="area" class="popbox" style="display: none"></div>
+                <div id="price" class="popbox" style="display: none"></div>
+            </div>
+        </div>
+        <div class="product-list">
+            <ul>
+
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="foot">
+        <div class="foottop clearfix">
+            <a href="">登录</a>
+            <a href="">注册</a>
+            <a href="#" style="border: 0;width: 40%;"><img src="./images/top.jpg" alt="" />返回顶部</a>
+        </div>
+        <div class="footbottom">
+            <p>
+                <a href="" style="color: red">手机APP下载</a>
+                <a href="">慢慢买手机版</a> -- 掌上比价平台
+            </p>
+            <p>
+                m.manmanbuy.com
+            </p>
+        </div>
+    </div>
+</body>
+<script src="lib/jquery.js"></script>
+<script src="lib/template.js"></script>
+<script type="text/html" id="list">
+    <ul>
+        {{if result}} {{each result as value index}}
+        <li>
+            {{if value.shopName}}
+            <a href="#" data-id="{{value.shopId}}">{{value.shopName}}</a> {{else}}
+            <a href="#" data-id="{{value.areaId}}">{{value.areaName}}</a> {{/if}}
+            <i></i>
+        </li>
+        {{/each}} {{/if}}
+    </ul>
+</script>
+<script type="text/html" id="productlist">
+    {{if result}} {{each result as value index}}
+    <li>
+        <a href="">
+            <div class="pic">
+                <img src="{{value.productImg}}" alt="" style="width:174px;height:174px">
+            </div>
+            <div class="tit">{{value.productName}}</div>
+            <div class="other clearfix">
+                <div class="price">{{value.productPrice}}</div>
+                <div class="btn">去凑单</div>
+            </div>
+        </a>
+    </li>
+    {{/each}} {{/if}}
+</script>
+<script type="text/javascript">
+    $(function() {
+        $.ajax({
+            url: "http://mmb.ittun.com/api/getgsshop",
+            dataType: "json",
+            success: function(data) {
+                console.log(data);
+                var html = template("list", data);
+                $("#shop").html(html);
+                $(".filter li:eq(0) span").html(data.result[0].shopName).attr("data-id", data.result[0].shopId);
+                $.ajax({
+                    url: "http://mmb.ittun.com/api/getgsshoparea",
+                    dataType: "json",
+                    success: function(data) {
+                        console.log(data);
+                        var html = template("list", data);
+                        $("#area").html(html);
+                        $(".filter li:eq(1) span").html(data.result[0].areaName.substr(0, 2)).attr("data-id", data.result[0].areaId);
+                        var index
+                        $(".filter li").on("click", function() {
+                            index = $(this).index();
+                            console.log(index);
+                            if ($(".popbox:eq(" + index + ")").css("display") == "none") {
+                                $(".popbox").css("display", "none");
+                                $(".popbox:eq(" + index + ")").css("display", "block");
+                            } else {
+                                $(".popbox:eq(" + index + ")").css("display", "none");
+                            }
+                            $(this).find("i").toggleClass("icon-up").toggleClass("icon-down");
+                            var idNum = $(this).children().attr("data-id");
+                            var arr = $(".popbox:eq(" + index + ") a");
+                            for (var i = 0; i < arr.length; i++) {
+                                if ($(".popbox:eq(" + index + ") a:eq(" + i + ")").attr("data-id") == idNum) {
+                                    $(".popbox:eq(" + index + ") a").next().removeClass("icon-select");
+                                    $(".popbox:eq(" + index + ") a:eq(" + i + ")").next().addClass("icon-select");
+                                }
+                            }
+                        });
+                        $(".popbox li").on("click", function() {
+                            var id = $(this).children("a").attr("data-id");
+                            var txt = $(this).children("a").html().substr(0, 2);
+                            $(this).parent().parent().css("display", "none");
+                            $(".filter li:eq(" + index + ") span").html(txt).attr("data-id", id);
+                            $(".filter li:eq(" + index + ") span").next().removeClass("icon-down").addClass("icon-up");
+                            $.ajax({
+                                url: "http://mmb.ittun.com/api/getgsproduct",
+                                data: {
+                                    shopid: $(".filter li:eq(0) span").attr("data-id"),
+                                    areaid: $(".filter li:eq(1) span").attr("data-id")
+                                },
+                                dataType: "json",
+                                success: function(data) {
+                                    var html = template("productlist", data);
+                                    $(".product-list ul").html(html);
+                                }
+                            });
+                        });
+                        $.ajax({
+                            url: "http://mmb.ittun.com/api/getgsproduct",
+                            data: {
+                                shopid: $(".on:eq(0) span").attr("data-id"),
+                                areaid: $(".on:eq(1) span").attr("data-id")
+                            },
+                            dataType: "json",
+                            success: function(data) {
+                                var html = template("productlist", data);
+                                $(".product-list ul").html(html);
+                            }
+                        });
+                    }
+                });
+            }
+        });
+    })
+</script>
+
+</html>

@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>比价</title>
+    <script src="./lib/less/less.min.js"></script>
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="shortcut icon" href="./images/logo.png" />
+    <link rel="stylesheet" href="./css/bijia.css" />
+</head>
+
+<body>
+    <div class="top clearfix">
+        <div class="fr appdown">
+            <a href="#" title="app下载">
+                <img src="./images/header_app.png" alt="app下载" />
+            </a>
+        </div>
+        <div class="fl logo">
+            <a href="index.html" title="慢慢买比价网-手机版">
+                <img src="./images/header_logo.png" alt="慢慢买比价网-手机版" />
+            </a>
+        </div>
+    </div>
+    <form action="" method="">
+        <div class="search">
+            <div class="searchtext">
+                <input type="text" placeholder="请输入你想要比价的商品" />
+            </div>
+            <div class="searchbtn">
+                <input type="submit" value="搜索" />
+            </div>
+        </div>
+    </form>
+    <div class="productlist-title"></div>
+    <div class="product-bijia"></div>
+    <div class="note">
+        * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+    </div>
+    <div class="productcom-title">
+        <div>网友评价</div>
+    </div>
+    <div class="productcom-list">
+        <ul></ul>
+        <div class="more">
+            <a href="">查看更多评价</a>
+        </div>
+    </div>
+    <div class="foot">
+        <div class="foottop clearfix">
+            <a href="">登录</a>
+            <a href="">注册</a>
+            <a href="#" style="border: 0;width: 40%;"><img src="./images/top.jpg" alt="" />返回顶部</a>
+        </div>
+        <div class="footbottom">
+            <p>
+                <a href="" style="color: red">手机APP下载</a>
+                <a href="">慢慢买手机版</a> -- 掌上比价平台
+            </p>
+
+            <p>
+                m.manmanbuy.com
+            </p>
+        </div>
+    </div>
+    <script src="lib/jquery.js"></script>
+    <script src="lib/template.js"></script>
+    <script src="lib/ch-url.js"></script>
+    <script type="text/html" id="product">
+        {{if result}} {{each result as value index}}
+        <div class="product-constrat">
+            <div class="product-name">
+                {{value.productName}}
+            </div>
+            <div class="productlist-img">
+                {{#value.productImg}}
+            </div>
+            <div class="product-collect">
+                <a href="">
+                    <img src="./images/sc.jpg" alt="" width="25px" height="25px" />
+                </a>
+            </div>
+        </div>
+        <div class="tab">
+            <ul>
+                <li class="cur"><a href="">比价购买</a></li>
+                <li class="mtab"><a href="">产品参数</a></li>
+                <li class=""><a href="">评价(2322)</a></li>
+            </ul>
+        </div>
+        <div class="plist">
+            <a href="redirect.aspx?webid=1&bjid=76069915&tourl=http://item.jd.com/1162187.html&y=bijia">
+            {{#value.bjShop}}
+        </a>
+        </div>
+        {{/each}} {{/if}}
+    </script>
+    <script type="text/html" id="comment">
+        {{if result}} {{each result as value index}}
+        <li>
+            <div class="clearfix">
+                <div class="com-name">{{value.comName}}</div>
+                <div class="com-time">{{value.comTime}}</div>
+            </div>
+            <div class="clearfix">
+                <span class="com-from">{{value.comFrom}}</span>
+            </div>
+            <div class="com-cotent">
+                {{value.comContent}}
+            </div>
+        </li>
+        {{/each}} {{/if}}
+    </script>
+    <script>
+        $(function() {
+            var url = {
+                productid: getQueryString("productid"),
+                category: getQueryString("category")
+            }
+            console.log(url.productid);
+            $.ajax({
+                url: "http://mmb.ittun.com/api/getproduct",
+                data: {
+                    productid: url.productid
+                },
+                dataType: "json",
+                success: function(data) {
+                    $.ajax({
+                        url: "http://mmb.ittun.com/api/getcategorybyid",
+                        data: {
+                            categoryid: data.result[0].categoryId
+                        },
+                        dataType: "json",
+                        success: function(data) {
+                            var htm = '<a href="index.html">首页></a>' +
+                                '<a href="http://www.mmbuy.com/productlist.php?categoryid=' + data.result[0].categoryId + '&category=' + data.result[0].category + '&pageid=1">' + data.result[0].category + '></a>' +
+                                '<a href="#">' + str + '></a>' +
+                                '<a href="" class="select">筛选</a>'
+                            $(".productlist-title").html(htm);
+                        }
+                    });
+                    var str = data.result[0].productName.split(" ")[0];
+                    var html = template("product", data);
+                    $(".product-bijia").html(html);
+                    $.ajax({
+                        url: "http://mmb.ittun.com/api/getproductcom",
+                        data: {
+                            productid: url.productid
+                        },
+                        dataType: "json",
+                        success: function(data) {
+                            var html = template("comment", data);
+                            $(".productcom-list ul").html(html);
+                        }
+                    })
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

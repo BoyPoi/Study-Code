@@ -1,0 +1,74 @@
+/*商品列表*/
+.content .goods{
+    padding:14px 8px;
+}
+.content a{
+    display: block;
+    width: 100%;
+    position: relative;
+}
+.content a img{
+    width: 100px;
+    float: left;
+}
+.content a .info{
+    padding-left: 100px;
+    height: 100px;
+}
+.content a .title{
+    font-size: 15px;
+    height: 70px;
+    font-weight: 500;
+}
+.content a .title span:last-child{
+    color: #FF841D;
+}
+.content a .mall{
+    font-size: 12px;
+    color: #A1A1A1;
+}
+.content a .review{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 12px;
+    color: #A1A1A1;
+}
+.content a i{
+    margin-right: 4px;
+    display: block;
+    width: 15px;
+    height: 15px;
+    float: left;
+    background: url(../images/review.svg) 0 0 no-repeat;
+}
+/*切换页面*/
+.change{
+    margin-top: 10px;
+}
+.change div{
+    width: 33.33%;
+    height: 35px;
+    float: left;
+    text-align: center;
+}
+.change div button{
+    font-size: 14px;
+    width: 80px;
+    height: 35px;
+    background-color: #d4d4d4;
+    border-radius: 5px;
+    border-bottom: 1px solid #bababa;
+    box-sizing: border-box;
+    box-shadow: 0 0 1px #666;
+    background: -webkit-gradient(linear,0 0,0 100%,from(#f1f1f1),to(#d4d4d4));
+}
+.change div select{
+    width: 95px;
+    height: 35px;
+    font-size: 16px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 8px 15px;
+    outline: none;
+}
